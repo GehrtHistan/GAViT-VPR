@@ -1,0 +1,9 @@
+root@2d5da181e4e8:/work/R2Former# python3 profile_gflops_basic_0.py
+Basic0 strict FLOPs (B=1): 0.075383 GFLOPs
+Correlation FLOPs: 15.94 MFLOPs
+Pair_head FLOPs: 2.02 MFLOPs
+Transformer blocks FLOPs: 36.87 MFLOPs
+knn_graph FLOPs: 0.88 MFLOPs
+GAT layers FLOPs: 19.58 MFLOPs
+Decoder_pred FLOPs: 0.10 MFLOPs
+Total params: 29.7 K
