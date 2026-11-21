@@ -1,0 +1,384 @@
+2025-09-07 08:36:50   Arguments: Namespace(aggregation='gem', backbone='deit', brightness=None, cache_refresh_rate=10000, channel_bottleneck=128, contrast=None, cos=True, criterion='triplet', dataset_name='msls', datasets_folder='/work/data', device='cuda', efficient_ram_testing=False, epochs_num=75, fc_output_dim=256, finetune=1, fix=0, freeze=0, freeze_te=None, horizontal_flip=False, hue=None, hypercolumn=0, infer_batch_size=64, l2='before_pool', local_dim=64, lr=0.0001, lr_crn_layer=0.005, lr_crn_net=0.0005, majority_weight=0.01, margin=0.1, mining='partial', neg_hardness=10, neg_samples_num=1000, negs_num_per_query=1, netvlad_clusters=64, non_local=False, num_local=250, num_non_local=1, num_pairs=5, num_workers=4, off_the_shelf='imagenet', optim='adamw', patience=75, pca_dataset_folder=None, pca_dim=None, pretrain='imagenet', queries_per_epoch=20000, rand_perspective=None, random_resized_crop=None, random_rotation=None, recall_values=[1, 5, 10, 20, 100], reg_top=5, rerank_batch_size=2, rerank_loss='ce', rerank_model='r2former', resize=[480, 640], resume=None, saturation=None, save_best=0, save_dir='logs/end_to_end', schedule=[60, 80], seed=0, test=False, test_method='hard_resize', train_batch_size=16, train_positives_dist_threshold=10, trunc_te=None, val_positive_dist_threshold=25, warmup=5)
+2025-09-07 08:36:50   The outputs are being saved in logs/end_to_end
+2025-09-07 08:36:50   Using 2 GPUs and 12 CPUs
+2025-09-07 08:36:55   Train query set: < TripletsDataset, msls - #database: 915202; #queries: 441280 >
+2025-09-07 08:36:55   Val set: < BaseDataset, msls - #database: 18871; #queries: 740 >
+2025-09-07 08:36:55   Test set: < BaseDataset, msls - #database: 38770; #queries: 1170 >
+2025-09-07 08:36:56   Start training epoch: 00
+2025-09-07 09:39:03   Finished epoch 00 in 1:02:07, average epoch triplet loss = 0.0719
+2025-09-07 09:50:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.350
+rerank: R@1: 60.7, R@5: 76.6, R@10: 80.5, R@20: 82.6, R@100: 87.7
+2025-09-07 09:50:56   Improved: previous best R@1 = 0.0, current R@1 = 60.7
+2025-09-07 09:50:56   Start training epoch: 01
+2025-09-07 10:54:00   Finished epoch 01 in 1:03:03, average epoch triplet loss = 0.0409
+2025-09-07 11:05:52   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.433
+rerank: R@1: 69.3, R@5: 82.0, R@10: 84.3, R@20: 87.2, R@100: 89.7
+2025-09-07 11:05:57   Improved: previous best R@1 = 60.7, current R@1 = 69.3
+2025-09-07 11:05:57   Start training epoch: 02
+2025-09-07 12:12:30   Finished epoch 02 in 1:06:32, average epoch triplet loss = 0.0344
+2025-09-07 12:24:52   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.431
+rerank: R@1: 70.5, R@5: 81.6, R@10: 85.4, R@20: 88.0, R@100: 91.5
+2025-09-07 12:25:06   Improved: previous best R@1 = 69.3, current R@1 = 70.5
+2025-09-07 12:25:06   Start training epoch: 03
+2025-09-07 13:27:57   Finished epoch 03 in 1:02:50, average epoch triplet loss = 0.0321
+2025-09-07 13:39:54   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.393
+rerank: R@1: 67.0, R@5: 79.2, R@10: 82.6, R@20: 84.9, R@100: 89.1
+2025-09-07 13:39:56   Not improved: 1 / 75: best R@1 = 70.5, current R@1 = 67.0
+2025-09-07 13:39:56   Start training epoch: 04
+2025-09-07 14:41:54   Finished epoch 04 in 1:01:57, average epoch triplet loss = 0.0305
+2025-09-07 14:53:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.409
+rerank: R@1: 69.3, R@5: 81.1, R@10: 83.9, R@20: 85.7, R@100: 88.9
+2025-09-07 14:53:50   Not improved: 2 / 75: best R@1 = 70.5, current R@1 = 69.3
+2025-09-07 14:53:50   Start training epoch: 05
+2025-09-07 15:55:57   Finished epoch 05 in 1:02:06, average epoch triplet loss = 0.0340
+2025-09-07 16:07:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.370
+rerank: R@1: 67.2, R@5: 78.9, R@10: 80.8, R@20: 82.8, R@100: 85.4
+2025-09-07 16:07:55   Not improved: 3 / 75: best R@1 = 70.5, current R@1 = 67.2
+2025-09-07 16:07:55   Start training epoch: 06
+2025-09-07 17:10:03   Finished epoch 06 in 1:02:08, average epoch triplet loss = 0.0321
+2025-09-07 17:22:04   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.392
+rerank: R@1: 67.3, R@5: 79.6, R@10: 82.4, R@20: 84.2, R@100: 87.7
+2025-09-07 17:22:07   Not improved: 4 / 75: best R@1 = 70.5, current R@1 = 67.3
+2025-09-07 17:22:07   Start training epoch: 07
+2025-09-07 18:24:19   Finished epoch 07 in 1:02:12, average epoch triplet loss = 0.0328
+2025-09-07 18:36:17   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.370
+rerank: R@1: 64.7, R@5: 77.2, R@10: 79.9, R@20: 82.0, R@100: 85.9
+2025-09-07 18:36:20   Not improved: 5 / 75: best R@1 = 70.5, current R@1 = 64.7
+2025-09-07 18:36:20   Start training epoch: 08
+2025-09-07 19:38:37   Finished epoch 08 in 1:02:17, average epoch triplet loss = 0.0311
+2025-09-07 19:50:36   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.371
+rerank: R@1: 61.8, R@5: 76.8, R@10: 81.2, R@20: 83.9, R@100: 87.0
+2025-09-07 19:50:43   Not improved: 6 / 75: best R@1 = 70.5, current R@1 = 61.8
+2025-09-07 19:50:43   Start training epoch: 09
+2025-09-07 20:52:59   Finished epoch 09 in 1:02:16, average epoch triplet loss = 0.0312
+2025-09-07 21:04:49   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.383
+rerank: R@1: 68.4, R@5: 79.5, R@10: 82.0, R@20: 83.8, R@100: 87.3
+2025-09-07 21:04:51   Not improved: 7 / 75: best R@1 = 70.5, current R@1 = 68.4
+2025-09-07 21:04:51   Start training epoch: 10
+2025-09-07 22:07:01   Finished epoch 10 in 1:02:09, average epoch triplet loss = 0.0287
+2025-09-07 22:18:53   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.392
+rerank: R@1: 66.6, R@5: 78.9, R@10: 83.2, R@20: 84.6, R@100: 87.4
+2025-09-07 22:18:56   Not improved: 8 / 75: best R@1 = 70.5, current R@1 = 66.6
+2025-09-07 22:18:56   Start training epoch: 11
+2025-09-07 23:20:58   Finished epoch 11 in 1:02:02, average epoch triplet loss = 0.0286
+2025-09-07 23:32:46   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.421
+rerank: R@1: 66.5, R@5: 81.9, R@10: 84.9, R@20: 87.2, R@100: 90.5
+2025-09-07 23:32:49   Not improved: 9 / 75: best R@1 = 70.5, current R@1 = 66.5
+2025-09-07 23:32:49   Start training epoch: 12
+2025-09-08 00:34:57   Finished epoch 12 in 1:02:07, average epoch triplet loss = 0.0289
+2025-09-08 00:46:43   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.428
+rerank: R@1: 67.0, R@5: 84.3, R@10: 86.9, R@20: 88.6, R@100: 91.5
+2025-09-08 00:46:47   Not improved: 10 / 75: best R@1 = 70.5, current R@1 = 67.0
+2025-09-08 00:46:47   Start training epoch: 13
+2025-09-08 01:48:53   Finished epoch 13 in 1:02:05, average epoch triplet loss = 0.0281
+2025-09-08 02:00:40   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.435
+rerank: R@1: 69.1, R@5: 82.6, R@10: 86.1, R@20: 89.1, R@100: 91.2
+2025-09-08 02:00:46   Not improved: 11 / 75: best R@1 = 70.5, current R@1 = 69.1
+2025-09-08 02:00:46   Start training epoch: 14
+2025-09-08 03:02:49   Finished epoch 14 in 1:02:03, average epoch triplet loss = 0.0279
+2025-09-08 03:14:36   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.391
+rerank: R@1: 65.4, R@5: 79.2, R@10: 84.1, R@20: 86.4, R@100: 89.3
+2025-09-08 03:14:41   Not improved: 12 / 75: best R@1 = 70.5, current R@1 = 65.4
+2025-09-08 03:14:41   Start training epoch: 15
+2025-09-08 04:16:43   Finished epoch 15 in 1:02:02, average epoch triplet loss = 0.0268
+2025-09-08 04:28:39   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.428
+rerank: R@1: 70.3, R@5: 82.4, R@10: 85.5, R@20: 87.8, R@100: 90.5
+2025-09-08 04:28:44   Not improved: 13 / 75: best R@1 = 70.5, current R@1 = 70.3
+2025-09-08 04:28:44   Start training epoch: 16
+2025-09-08 05:30:48   Finished epoch 16 in 1:02:04, average epoch triplet loss = 0.0267
+2025-09-08 05:42:29   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.432
+rerank: R@1: 69.7, R@5: 83.2, R@10: 85.8, R@20: 87.7, R@100: 91.2
+2025-09-08 05:42:34   Not improved: 14 / 75: best R@1 = 70.5, current R@1 = 69.7
+2025-09-08 05:42:34   Start training epoch: 17
+2025-09-08 06:44:34   Finished epoch 17 in 1:01:59, average epoch triplet loss = 0.0252
+2025-09-08 06:56:23   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.434
+rerank: R@1: 69.6, R@5: 82.6, R@10: 86.1, R@20: 88.1, R@100: 90.7
+2025-09-08 06:56:29   Not improved: 15 / 75: best R@1 = 70.5, current R@1 = 69.6
+2025-09-08 06:56:29   Start training epoch: 18
+2025-09-08 07:58:26   Finished epoch 18 in 1:01:56, average epoch triplet loss = 0.0250
+2025-09-08 08:10:12   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.424
+rerank: R@1: 69.1, R@5: 82.7, R@10: 86.4, R@20: 88.1, R@100: 91.1
+2025-09-08 08:10:17   Not improved: 16 / 75: best R@1 = 70.5, current R@1 = 69.1
+2025-09-08 08:10:17   Start training epoch: 19
+2025-09-08 09:12:13   Finished epoch 19 in 1:01:56, average epoch triplet loss = 0.0237
+2025-09-08 09:24:04   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.449
+rerank: R@1: 71.1, R@5: 83.0, R@10: 85.5, R@20: 88.1, R@100: 90.9
+2025-09-08 09:24:11   Improved: previous best R@1 = 70.5, current R@1 = 71.1
+2025-09-08 09:24:11   Start training epoch: 20
+2025-09-08 10:25:57   Finished epoch 20 in 1:01:45, average epoch triplet loss = 0.0237
+2025-09-08 10:37:41   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.459
+rerank: R@1: 73.2, R@5: 83.6, R@10: 86.2, R@20: 88.2, R@100: 91.1
+2025-09-08 10:37:50   Improved: previous best R@1 = 71.1, current R@1 = 73.2
+2025-09-08 10:37:50   Start training epoch: 21
+2025-09-08 11:39:43   Finished epoch 21 in 1:01:53, average epoch triplet loss = 0.0239
+2025-09-08 11:51:28   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.456
+rerank: R@1: 71.9, R@5: 83.6, R@10: 86.1, R@20: 88.8, R@100: 92.0
+2025-09-08 11:51:33   Not improved: 1 / 75: best R@1 = 73.2, current R@1 = 71.9
+2025-09-08 11:51:33   Start training epoch: 22
+2025-09-08 12:53:24   Finished epoch 22 in 1:01:51, average epoch triplet loss = 0.0232
+2025-09-08 13:05:09   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.460
+rerank: R@1: 69.9, R@5: 83.8, R@10: 87.3, R@20: 88.8, R@100: 91.5
+2025-09-08 13:05:13   Not improved: 2 / 75: best R@1 = 73.2, current R@1 = 69.9
+2025-09-08 13:05:13   Start training epoch: 23
+2025-09-08 14:07:31   Finished epoch 23 in 1:02:18, average epoch triplet loss = 0.0222
+2025-09-08 14:19:22   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.469
+rerank: R@1: 71.9, R@5: 85.1, R@10: 87.4, R@20: 88.9, R@100: 92.3
+2025-09-08 14:19:26   Not improved: 3 / 75: best R@1 = 73.2, current R@1 = 71.9
+2025-09-08 14:19:26   Start training epoch: 24
+2025-09-08 15:22:00   Finished epoch 24 in 1:02:34, average epoch triplet loss = 0.0220
+2025-09-08 15:33:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.480
+rerank: R@1: 73.2, R@5: 86.9, R@10: 89.7, R@20: 90.5, R@100: 93.5
+2025-09-08 15:33:51   Not improved: 4 / 75: best R@1 = 73.2, current R@1 = 73.2
+2025-09-08 15:33:51   Start training epoch: 25
+2025-09-08 16:36:00   Finished epoch 25 in 1:02:08, average epoch triplet loss = 0.0225
+2025-09-08 16:47:51   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.488
+rerank: R@1: 74.3, R@5: 84.5, R@10: 87.8, R@20: 89.2, R@100: 92.3
+2025-09-08 16:47:59   Improved: previous best R@1 = 73.2, current R@1 = 74.3
+2025-09-08 16:47:59   Start training epoch: 26
+2025-09-08 17:49:35   Finished epoch 26 in 1:01:36, average epoch triplet loss = 0.0207
+2025-09-08 18:01:20   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.472
+rerank: R@1: 70.9, R@5: 84.5, R@10: 87.2, R@20: 89.9, R@100: 93.4
+2025-09-08 18:01:25   Not improved: 1 / 75: best R@1 = 74.3, current R@1 = 70.9
+2025-09-08 18:01:25   Start training epoch: 27
+2025-09-08 19:03:13   Finished epoch 27 in 1:01:48, average epoch triplet loss = 0.0206
+2025-09-08 19:15:04   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.507
+rerank: R@1: 75.4, R@5: 85.9, R@10: 88.6, R@20: 90.7, R@100: 92.7
+2025-09-08 19:15:17   Improved: previous best R@1 = 74.3, current R@1 = 75.4
+2025-09-08 19:15:17   Start training epoch: 28
+2025-09-08 20:17:53   Finished epoch 28 in 1:02:36, average epoch triplet loss = 0.0198
+2025-09-08 20:29:56   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.507
+rerank: R@1: 75.4, R@5: 86.4, R@10: 88.0, R@20: 90.4, R@100: 92.3
+2025-09-08 20:30:01   Not improved: 1 / 75: best R@1 = 75.4, current R@1 = 75.4
+2025-09-08 20:30:01   Start training epoch: 29
+2025-09-08 21:32:05   Finished epoch 29 in 1:02:04, average epoch triplet loss = 0.0183
+2025-09-08 21:43:54   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.491
+rerank: R@1: 74.3, R@5: 85.4, R@10: 88.0, R@20: 89.7, R@100: 92.0
+2025-09-08 21:43:59   Not improved: 2 / 75: best R@1 = 75.4, current R@1 = 74.3
+2025-09-08 21:43:59   Start training epoch: 30
+2025-09-08 22:45:53   Finished epoch 30 in 1:01:54, average epoch triplet loss = 0.0189
+2025-09-08 22:57:40   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.490
+rerank: R@1: 73.5, R@5: 85.1, R@10: 87.6, R@20: 90.4, R@100: 93.0
+2025-09-08 22:57:45   Not improved: 3 / 75: best R@1 = 75.4, current R@1 = 73.5
+2025-09-08 22:57:45   Start training epoch: 31
+2025-09-08 23:59:44   Finished epoch 31 in 1:01:59, average epoch triplet loss = 0.0190
+2025-09-09 00:11:31   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.486
+rerank: R@1: 71.5, R@5: 85.1, R@10: 88.0, R@20: 89.3, R@100: 92.3
+2025-09-09 00:11:35   Not improved: 4 / 75: best R@1 = 75.4, current R@1 = 71.5
+2025-09-09 00:11:35   Start training epoch: 32
+2025-09-09 01:13:26   Finished epoch 32 in 1:01:51, average epoch triplet loss = 0.0177
+2025-09-09 01:25:14   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.485
+rerank: R@1: 73.9, R@5: 85.7, R@10: 88.2, R@20: 90.3, R@100: 94.2
+2025-09-09 01:25:19   Not improved: 5 / 75: best R@1 = 75.4, current R@1 = 73.9
+2025-09-09 01:25:19   Start training epoch: 33
+2025-09-09 02:27:44   Finished epoch 33 in 1:02:24, average epoch triplet loss = 0.0172
+2025-09-09 02:39:31   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.497
+rerank: R@1: 74.1, R@5: 86.6, R@10: 88.4, R@20: 90.5, R@100: 93.5
+2025-09-09 02:39:35   Not improved: 6 / 75: best R@1 = 75.4, current R@1 = 74.1
+2025-09-09 02:39:35   Start training epoch: 34
+2025-09-09 03:41:30   Finished epoch 34 in 1:01:54, average epoch triplet loss = 0.0177
+2025-09-09 03:53:23   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.515
+rerank: R@1: 75.7, R@5: 86.5, R@10: 88.2, R@20: 90.0, R@100: 93.1
+2025-09-09 03:53:32   Improved: previous best R@1 = 75.4, current R@1 = 75.7
+2025-09-09 03:53:32   Start training epoch: 35
+2025-09-09 04:56:05   Finished epoch 35 in 1:02:33, average epoch triplet loss = 0.0167
+2025-09-09 05:07:59   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.516
+rerank: R@1: 76.2, R@5: 86.1, R@10: 89.6, R@20: 91.4, R@100: 93.4
+2025-09-09 05:08:05   Improved: previous best R@1 = 75.7, current R@1 = 76.2
+2025-09-09 05:08:05   Start training epoch: 36
+2025-09-09 06:10:09   Finished epoch 36 in 1:02:04, average epoch triplet loss = 0.0164
+2025-09-09 06:21:53   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.527
+rerank: R@1: 77.4, R@5: 88.2, R@10: 89.5, R@20: 92.3, R@100: 94.1
+2025-09-09 06:21:58   Improved: previous best R@1 = 76.2, current R@1 = 77.4
+2025-09-09 06:21:58   Start training epoch: 37
+2025-09-09 07:23:47   Finished epoch 37 in 1:01:48, average epoch triplet loss = 0.0157
+2025-09-09 07:35:33   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.515
+rerank: R@1: 73.6, R@5: 87.6, R@10: 89.9, R@20: 91.8, R@100: 93.9
+2025-09-09 07:35:37   Not improved: 1 / 75: best R@1 = 77.4, current R@1 = 73.6
+2025-09-09 07:35:37   Start training epoch: 38
+2025-09-09 08:37:21   Finished epoch 38 in 1:01:44, average epoch triplet loss = 0.0163
+2025-09-09 08:49:09   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.529
+rerank: R@1: 76.5, R@5: 87.2, R@10: 90.0, R@20: 91.9, R@100: 94.5
+2025-09-09 08:49:12   Not improved: 2 / 75: best R@1 = 77.4, current R@1 = 76.5
+2025-09-09 08:49:12   Start training epoch: 39
+2025-09-09 09:51:11   Finished epoch 39 in 1:01:59, average epoch triplet loss = 0.0159
+2025-09-09 10:02:58   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.526
+rerank: R@1: 74.5, R@5: 86.9, R@10: 88.8, R@20: 90.9, R@100: 94.6
+2025-09-09 10:03:02   Not improved: 3 / 75: best R@1 = 77.4, current R@1 = 74.5
+2025-09-09 10:03:02   Start training epoch: 40
+2025-09-09 11:04:49   Finished epoch 40 in 1:01:47, average epoch triplet loss = 0.0151
+2025-09-09 11:16:28   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.513
+rerank: R@1: 70.8, R@5: 86.8, R@10: 90.4, R@20: 92.3, R@100: 94.6
+2025-09-09 11:16:31   Not improved: 4 / 75: best R@1 = 77.4, current R@1 = 70.8
+2025-09-09 11:16:31   Start training epoch: 41
+2025-09-09 12:18:16   Finished epoch 41 in 1:01:44, average epoch triplet loss = 0.0146
+2025-09-09 12:30:00   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.528
+rerank: R@1: 75.1, R@5: 85.7, R@10: 88.4, R@20: 90.4, R@100: 93.5
+2025-09-09 12:30:03   Not improved: 5 / 75: best R@1 = 77.4, current R@1 = 75.1
+2025-09-09 12:30:03   Start training epoch: 42
+2025-09-09 13:31:48   Finished epoch 42 in 1:01:45, average epoch triplet loss = 0.0141
+2025-09-09 13:43:33   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.546
+rerank: R@1: 76.4, R@5: 87.7, R@10: 90.1, R@20: 92.6, R@100: 95.0
+2025-09-09 13:43:39   Not improved: 6 / 75: best R@1 = 77.4, current R@1 = 76.4
+2025-09-09 13:43:39   Start training epoch: 43
+2025-09-09 14:45:24   Finished epoch 43 in 1:01:44, average epoch triplet loss = 0.0143
+2025-09-09 14:57:12   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.547
+rerank: R@1: 78.9, R@5: 87.4, R@10: 90.1, R@20: 92.0, R@100: 94.9
+2025-09-09 14:57:25   Improved: previous best R@1 = 77.4, current R@1 = 78.9
+2025-09-09 14:57:25   Start training epoch: 44
+2025-09-09 15:59:28   Finished epoch 44 in 1:02:03, average epoch triplet loss = 0.0133
+2025-09-09 16:11:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.550
+rerank: R@1: 76.4, R@5: 86.9, R@10: 90.0, R@20: 92.2, R@100: 94.7
+2025-09-09 16:11:16   Not improved: 1 / 75: best R@1 = 78.9, current R@1 = 76.4
+2025-09-09 16:11:16   Start training epoch: 45
+2025-09-09 17:13:28   Finished epoch 45 in 1:02:11, average epoch triplet loss = 0.0132
+2025-09-09 17:25:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.546
+rerank: R@1: 75.8, R@5: 87.7, R@10: 90.1, R@20: 92.0, R@100: 94.5
+2025-09-09 17:25:16   Not improved: 2 / 75: best R@1 = 78.9, current R@1 = 75.8
+2025-09-09 17:25:16   Start training epoch: 46
+2025-09-09 18:27:34   Finished epoch 46 in 1:02:17, average epoch triplet loss = 0.0129
+2025-09-09 18:39:23   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.545
+rerank: R@1: 76.9, R@5: 87.4, R@10: 90.0, R@20: 91.6, R@100: 93.8
+2025-09-09 18:39:26   Not improved: 3 / 75: best R@1 = 78.9, current R@1 = 76.9
+2025-09-09 18:39:26   Start training epoch: 47
+2025-09-09 19:41:11   Finished epoch 47 in 1:01:44, average epoch triplet loss = 0.0129
+2025-09-09 19:52:56   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.575
+rerank: R@1: 79.2, R@5: 89.9, R@10: 91.9, R@20: 93.4, R@100: 95.3
+2025-09-09 19:53:01   Improved: previous best R@1 = 78.9, current R@1 = 79.2
+2025-09-09 19:53:01   Start training epoch: 48
+2025-09-09 20:54:43   Finished epoch 48 in 1:01:41, average epoch triplet loss = 0.0125
+2025-09-09 21:06:28   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.572
+rerank: R@1: 79.2, R@5: 89.2, R@10: 92.0, R@20: 93.8, R@100: 95.7
+2025-09-09 21:06:31   Not improved: 1 / 75: best R@1 = 79.2, current R@1 = 79.2
+2025-09-09 21:06:31   Start training epoch: 49
+2025-09-09 22:08:21   Finished epoch 49 in 1:01:49, average epoch triplet loss = 0.0120
+2025-09-09 22:20:08   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.564
+rerank: R@1: 76.9, R@5: 88.6, R@10: 90.9, R@20: 92.4, R@100: 94.7
+2025-09-09 22:20:11   Not improved: 2 / 75: best R@1 = 79.2, current R@1 = 76.9
+2025-09-09 22:20:11   Start training epoch: 50
+2025-09-09 23:22:04   Finished epoch 50 in 1:01:52, average epoch triplet loss = 0.0124
+2025-09-09 23:33:50   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.581
+rerank: R@1: 78.4, R@5: 88.5, R@10: 91.5, R@20: 92.8, R@100: 95.4
+2025-09-09 23:33:56   Not improved: 3 / 75: best R@1 = 79.2, current R@1 = 78.4
+2025-09-09 23:33:56   Start training epoch: 51
+2025-09-10 00:36:31   Finished epoch 51 in 1:02:35, average epoch triplet loss = 0.0118
+2025-09-10 00:48:20   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.577
+rerank: R@1: 78.5, R@5: 89.6, R@10: 91.2, R@20: 92.6, R@100: 95.4
+2025-09-10 00:48:27   Not improved: 4 / 75: best R@1 = 79.2, current R@1 = 78.5
+2025-09-10 00:48:27   Start training epoch: 52
+2025-09-10 01:50:44   Finished epoch 52 in 1:02:17, average epoch triplet loss = 0.0119
+2025-09-10 02:02:29   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.587
+rerank: R@1: 79.7, R@5: 89.7, R@10: 92.0, R@20: 93.8, R@100: 95.8
+2025-09-10 02:02:35   Improved: previous best R@1 = 79.2, current R@1 = 79.7
+2025-09-10 02:02:35   Start training epoch: 53
+2025-09-10 03:05:06   Finished epoch 53 in 1:02:30, average epoch triplet loss = 0.0110
+2025-09-10 03:17:01   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.584
+rerank: R@1: 79.5, R@5: 89.2, R@10: 92.2, R@20: 93.6, R@100: 95.8
+2025-09-10 03:17:04   Not improved: 1 / 75: best R@1 = 79.7, current R@1 = 79.5
+2025-09-10 03:17:04   Start training epoch: 54
+2025-09-10 04:19:09   Finished epoch 54 in 1:02:04, average epoch triplet loss = 0.0110
+2025-09-10 04:30:56   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.586
+rerank: R@1: 78.5, R@5: 88.6, R@10: 91.4, R@20: 93.4, R@100: 95.1
+2025-09-10 04:31:03   Not improved: 2 / 75: best R@1 = 79.7, current R@1 = 78.5
+2025-09-10 04:31:03   Start training epoch: 55
+2025-09-10 05:32:58   Finished epoch 55 in 1:01:54, average epoch triplet loss = 0.0112
+2025-09-10 05:44:50   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.590
+rerank: R@1: 80.3, R@5: 89.7, R@10: 92.0, R@20: 93.6, R@100: 95.8
+2025-09-10 05:44:55   Improved: previous best R@1 = 79.7, current R@1 = 80.3
+2025-09-10 05:44:55   Start training epoch: 56
+2025-09-10 06:47:06   Finished epoch 56 in 1:02:10, average epoch triplet loss = 0.0102
+2025-09-10 06:58:55   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.597
+rerank: R@1: 82.0, R@5: 90.5, R@10: 92.0, R@20: 93.9, R@100: 95.8
+2025-09-10 06:59:01   Improved: previous best R@1 = 80.3, current R@1 = 82.0
+2025-09-10 06:59:01   Start training epoch: 57
+2025-09-10 08:01:18   Finished epoch 57 in 1:02:17, average epoch triplet loss = 0.0102
+2025-09-10 08:13:02   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.599
+rerank: R@1: 81.4, R@5: 90.9, R@10: 92.7, R@20: 94.3, R@100: 95.8
+2025-09-10 08:13:07   Not improved: 1 / 75: best R@1 = 82.0, current R@1 = 81.4
+2025-09-10 08:13:07   Start training epoch: 58
+2025-09-10 09:15:16   Finished epoch 58 in 1:02:08, average epoch triplet loss = 0.0100
+2025-09-10 09:27:06   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.598
+rerank: R@1: 81.1, R@5: 90.1, R@10: 92.2, R@20: 94.1, R@100: 95.8
+2025-09-10 09:27:14   Not improved: 2 / 75: best R@1 = 82.0, current R@1 = 81.1
+2025-09-10 09:27:14   Start training epoch: 59
+2025-09-10 10:29:56   Finished epoch 59 in 1:02:41, average epoch triplet loss = 0.0098
+2025-09-10 10:41:44   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.600
+rerank: R@1: 81.1, R@5: 91.2, R@10: 92.3, R@20: 93.9, R@100: 95.8
+2025-09-10 10:41:50   Not improved: 3 / 75: best R@1 = 82.0, current R@1 = 81.1
+2025-09-10 10:41:50   Start training epoch: 60
+2025-09-10 11:43:53   Finished epoch 60 in 1:02:03, average epoch triplet loss = 0.0100
+2025-09-10 11:55:44   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.601
+rerank: R@1: 82.0, R@5: 90.3, R@10: 93.0, R@20: 94.3, R@100: 95.9
+2025-09-10 11:55:52   Not improved: 4 / 75: best R@1 = 82.0, current R@1 = 82.0
+2025-09-10 11:55:52   Start training epoch: 61
+2025-09-10 12:58:22   Finished epoch 61 in 1:02:30, average epoch triplet loss = 0.0102
+2025-09-10 13:10:09   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.600
+rerank: R@1: 80.5, R@5: 90.4, R@10: 92.2, R@20: 94.1, R@100: 95.8
+2025-09-10 13:10:12   Not improved: 5 / 75: best R@1 = 82.0, current R@1 = 80.5
+2025-09-10 13:10:12   Start training epoch: 62
+2025-09-10 14:12:16   Finished epoch 62 in 1:02:04, average epoch triplet loss = 0.0104
+2025-09-10 14:24:10   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.603
+rerank: R@1: 80.8, R@5: 90.9, R@10: 93.0, R@20: 94.5, R@100: 96.2
+2025-09-10 14:24:17   Not improved: 6 / 75: best R@1 = 82.0, current R@1 = 80.8
+2025-09-10 14:24:17   Start training epoch: 63
+2025-09-10 15:26:24   Finished epoch 63 in 1:02:06, average epoch triplet loss = 0.0099
+2025-09-10 15:38:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.607
+rerank: R@1: 81.8, R@5: 91.6, R@10: 92.8, R@20: 94.3, R@100: 96.1
+2025-09-10 15:38:16   Not improved: 7 / 75: best R@1 = 82.0, current R@1 = 81.8
+2025-09-10 15:38:16   Start training epoch: 64
+2025-09-10 16:40:28   Finished epoch 64 in 1:02:11, average epoch triplet loss = 0.0101
+2025-09-10 16:52:18   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.611
+rerank: R@1: 81.2, R@5: 91.8, R@10: 92.7, R@20: 94.7, R@100: 96.2
+2025-09-10 16:52:21   Not improved: 8 / 75: best R@1 = 82.0, current R@1 = 81.2
+2025-09-10 16:52:21   Start training epoch: 65
+2025-09-10 17:54:30   Finished epoch 65 in 1:02:09, average epoch triplet loss = 0.0100
+2025-09-10 18:06:17   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.612
+rerank: R@1: 82.3, R@5: 91.9, R@10: 93.5, R@20: 95.0, R@100: 96.5
+2025-09-10 18:06:23   Improved: previous best R@1 = 82.0, current R@1 = 82.3
+2025-09-10 18:06:23   Start training epoch: 66
+2025-09-10 19:08:21   Finished epoch 66 in 1:01:57, average epoch triplet loss = 0.0101
+2025-09-10 19:20:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.615
+rerank: R@1: 82.4, R@5: 91.9, R@10: 94.1, R@20: 95.0, R@100: 96.4
+2025-09-10 19:20:22   Improved: previous best R@1 = 82.3, current R@1 = 82.4
+2025-09-10 19:20:22   Start training epoch: 67
+2025-09-10 20:22:26   Finished epoch 67 in 1:02:03, average epoch triplet loss = 0.0099
+2025-09-10 20:34:15   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.616
+rerank: R@1: 82.3, R@5: 92.4, R@10: 94.2, R@20: 95.0, R@100: 96.5
+2025-09-10 20:34:18   Not improved: 1 / 75: best R@1 = 82.4, current R@1 = 82.3
+2025-09-10 20:34:18   Start training epoch: 68
+2025-09-10 21:36:09   Finished epoch 68 in 1:01:50, average epoch triplet loss = 0.0100
+2025-09-10 21:47:52   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.618
+rerank: R@1: 82.6, R@5: 92.2, R@10: 93.9, R@20: 95.1, R@100: 96.6
+2025-09-10 21:47:58   Improved: previous best R@1 = 82.4, current R@1 = 82.6
+2025-09-10 21:47:58   Start training epoch: 69
+2025-09-10 22:50:05   Finished epoch 69 in 1:02:07, average epoch triplet loss = 0.0098
+2025-09-10 23:01:50   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.8, R@5: 92.2, R@10: 94.3, R@20: 95.0, R@100: 96.6
+2025-09-10 23:01:56   Improved: previous best R@1 = 82.6, current R@1 = 82.8
+2025-09-10 23:01:56   Start training epoch: 70
+2025-09-11 00:03:44   Finished epoch 70 in 1:01:48, average epoch triplet loss = 0.0107
+2025-09-11 00:15:34   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.621
+rerank: R@1: 83.1, R@5: 92.4, R@10: 94.2, R@20: 95.1, R@100: 96.6
+2025-09-11 00:15:40   Improved: previous best R@1 = 82.8, current R@1 = 83.1
+2025-09-11 00:15:40   Start training epoch: 71
+2025-09-11 01:17:39   Finished epoch 71 in 1:01:59, average epoch triplet loss = 0.0102
+2025-09-11 01:29:24   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.7, R@5: 92.2, R@10: 94.1, R@20: 95.0, R@100: 96.6
+2025-09-11 01:29:27   Not improved: 1 / 75: best R@1 = 83.1, current R@1 = 82.7
+2025-09-11 01:29:27   Start training epoch: 72
+2025-09-11 02:31:21   Finished epoch 72 in 1:01:53, average epoch triplet loss = 0.0113
+2025-09-11 02:43:15   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 83.0, R@5: 92.6, R@10: 94.1, R@20: 95.1, R@100: 96.6
+2025-09-11 02:43:23   Not improved: 2 / 75: best R@1 = 83.1, current R@1 = 83.0
+2025-09-11 02:43:23   Start training epoch: 73
+2025-09-11 03:46:15   Finished epoch 73 in 1:02:52, average epoch triplet loss = 0.0110
+2025-09-11 03:58:03   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.8, R@5: 92.6, R@10: 94.1, R@20: 95.1, R@100: 96.6
+2025-09-11 03:58:10   Not improved: 3 / 75: best R@1 = 83.1, current R@1 = 82.8
+2025-09-11 03:58:10   Start training epoch: 74
+2025-09-11 05:00:09   Finished epoch 74 in 1:01:59, average epoch triplet loss = 0.0110
+2025-09-11 05:11:55   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.8, R@5: 92.6, R@10: 94.2, R@20: 95.1, R@100: 96.6
+2025-09-11 05:12:02   Not improved: 4 / 75: best R@1 = 83.1, current R@1 = 82.8
+2025-09-11 05:12:02   Best R@1: 83.1
+2025-09-11 05:12:02   Trained for 75 epochs, in total in 3 days, 20:35:11
+2025-09-11 05:31:37   Recalls on < BaseDataset, msls - #database: 38770; #queries: 1170 >: 
