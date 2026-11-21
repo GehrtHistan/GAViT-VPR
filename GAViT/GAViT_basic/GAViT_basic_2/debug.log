@@ -1,0 +1,1365 @@
+2025-09-07 08:36:50   Arguments: Namespace(aggregation='gem', backbone='deit', brightness=None, cache_refresh_rate=10000, channel_bottleneck=128, contrast=None, cos=True, criterion='triplet', dataset_name='msls', datasets_folder='/work/data', device='cuda', efficient_ram_testing=False, epochs_num=75, fc_output_dim=256, finetune=1, fix=0, freeze=0, freeze_te=None, horizontal_flip=False, hue=None, hypercolumn=0, infer_batch_size=64, l2='before_pool', local_dim=64, lr=0.0001, lr_crn_layer=0.005, lr_crn_net=0.0005, majority_weight=0.01, margin=0.1, mining='partial', neg_hardness=10, neg_samples_num=1000, negs_num_per_query=1, netvlad_clusters=64, non_local=False, num_local=250, num_non_local=1, num_pairs=5, num_workers=4, off_the_shelf='imagenet', optim='adamw', patience=75, pca_dataset_folder=None, pca_dim=None, pretrain='imagenet', queries_per_epoch=20000, rand_perspective=None, random_resized_crop=None, random_rotation=None, recall_values=[1, 5, 10, 20, 100], reg_top=5, rerank_batch_size=2, rerank_loss='ce', rerank_model='r2former', resize=[480, 640], resume=None, saturation=None, save_best=0, save_dir='logs/end_to_end', schedule=[60, 80], seed=0, test=False, test_method='hard_resize', train_batch_size=16, train_positives_dist_threshold=10, trunc_te=None, val_positive_dist_threshold=25, warmup=5)
+2025-09-07 08:36:50   The outputs are being saved in logs/end_to_end
+2025-09-07 08:36:50   Using 2 GPUs and 12 CPUs
+2025-09-07 08:36:50   Loading dataset msls from folder /work/data
+2025-09-07 08:36:55   Train query set: < TripletsDataset, msls - #database: 915202; #queries: 441280 >
+2025-09-07 08:36:55   Val set: < BaseDataset, msls - #database: 18871; #queries: 740 >
+2025-09-07 08:36:55   Test set: < BaseDataset, msls - #database: 38770; #queries: 1170 >
+2025-09-07 08:36:56   Start training epoch: 00
+2025-09-07 08:36:56   Cache: 0 / 2
+2025-09-07 08:47:46   global loss:0.2825770378112793
+2025-09-07 08:47:47   rerank loss:0.04380529001355171
+2025-09-07 08:47:49   global loss:0.25943246483802795
+2025-09-07 08:47:50   rerank loss:0.04330290108919144
+2025-09-07 09:07:56   Epoch[00](0/2): current batch triplet loss = 0.0377, average epoch triplet loss = 0.0811
+2025-09-07 09:07:56   Cache: 1 / 2
+2025-09-07 09:39:03   Epoch[00](1/2): current batch triplet loss = 0.0362, average epoch triplet loss = 0.0719
+2025-09-07 09:39:03   Finished epoch 00 in 1:02:07, average epoch triplet loss = 0.0719
+2025-09-07 09:39:03   Extracting database features for evaluation/testing
+2025-09-07 09:42:06   Extracting queries features for evaluation/testing, time for each:0.009481417154268975
+2025-09-07 09:42:14   Calculating recalls
+2025-09-07 09:42:14   Retrieval time for each:0.00013924708237519136,0.1030428409576416/740
+2025-09-07 09:50:23   (740, 100), torch.Size([2, 100]), time:,1.2172236442565918, time each:, 0.6120931377282014
+2025-09-07 09:50:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.350
+rerank: R@1: 60.7, R@5: 76.6, R@10: 80.5, R@20: 82.6, R@100: 87.7
+2025-09-07 09:50:56   Improved: previous best R@1 = 0.0, current R@1 = 60.7
+2025-09-07 09:50:56   Start training epoch: 01
+2025-09-07 09:50:56   Cache: 0 / 2
+2025-09-07 10:02:46   global loss:0.09039346128702164
+2025-09-07 10:02:46   rerank loss:0.03970368579030037
+2025-09-07 10:02:48   global loss:0.06490806490182877
+2025-09-07 10:02:48   rerank loss:0.02510135993361473
+2025-09-07 10:23:00   Epoch[01](0/2): current batch triplet loss = 0.0371, average epoch triplet loss = 0.0441
+2025-09-07 10:23:00   Cache: 1 / 2
+2025-09-07 10:54:00   Epoch[01](1/2): current batch triplet loss = 0.0271, average epoch triplet loss = 0.0409
+2025-09-07 10:54:00   Finished epoch 01 in 1:03:03, average epoch triplet loss = 0.0409
+2025-09-07 10:54:00   Extracting database features for evaluation/testing
+2025-09-07 10:57:04   Extracting queries features for evaluation/testing, time for each:0.009616580046604777
+2025-09-07 10:57:12   Calculating recalls
+2025-09-07 10:57:12   Retrieval time for each:0.0001367021251369167,0.10115957260131836/740
+2025-09-07 11:05:24   (740, 100), torch.Size([2, 100]), time:,1.2132611274719238, time each:, 0.6137207843161918
+2025-09-07 11:05:52   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.433
+rerank: R@1: 69.3, R@5: 82.0, R@10: 84.3, R@20: 87.2, R@100: 89.7
+2025-09-07 11:05:57   Improved: previous best R@1 = 60.7, current R@1 = 69.3
+2025-09-07 11:05:57   Start training epoch: 02
+2025-09-07 11:05:57   Cache: 0 / 2
+2025-09-07 11:21:11   global loss:0.06317123770713806
+2025-09-07 11:21:11   rerank loss:0.033380910754203796
+2025-09-07 11:21:13   global loss:0.08551587164402008
+2025-09-07 11:21:13   rerank loss:0.03726629167795181
+2025-09-07 11:41:23   Epoch[02](0/2): current batch triplet loss = 0.0261, average epoch triplet loss = 0.0360
+2025-09-07 11:41:23   Cache: 1 / 2
+2025-09-07 12:12:30   Epoch[02](1/2): current batch triplet loss = 0.0234, average epoch triplet loss = 0.0344
+2025-09-07 12:12:30   Finished epoch 02 in 1:06:32, average epoch triplet loss = 0.0344
+2025-09-07 12:12:30   Extracting database features for evaluation/testing
+2025-09-07 12:16:09   Extracting queries features for evaluation/testing, time for each:0.009620751758983977
+2025-09-07 12:16:17   Calculating recalls
+2025-09-07 12:16:17   Retrieval time for each:0.0001547929402944204,0.1145467758178711/740
+2025-09-07 12:24:24   (740, 100), torch.Size([2, 100]), time:,1.217494010925293, time each:, 0.6136390879347517
+2025-09-07 12:24:52   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.431
+rerank: R@1: 70.5, R@5: 81.6, R@10: 85.4, R@20: 88.0, R@100: 91.5
+2025-09-07 12:25:06   Improved: previous best R@1 = 69.3, current R@1 = 70.5
+2025-09-07 12:25:06   Start training epoch: 03
+2025-09-07 12:25:06   Cache: 0 / 2
+2025-09-07 12:36:00   global loss:0.05226392298936844
+2025-09-07 12:36:01   rerank loss:0.038662854582071304
+2025-09-07 12:36:02   global loss:0.05171729624271393
+2025-09-07 12:36:03   rerank loss:0.0330803282558918
+2025-09-07 12:56:26   Epoch[03](0/2): current batch triplet loss = 0.0340, average epoch triplet loss = 0.0331
+2025-09-07 12:56:26   Cache: 1 / 2
+2025-09-07 13:27:57   Epoch[03](1/2): current batch triplet loss = 0.0204, average epoch triplet loss = 0.0321
+2025-09-07 13:27:57   Finished epoch 03 in 1:02:50, average epoch triplet loss = 0.0321
+2025-09-07 13:27:57   Extracting database features for evaluation/testing
+2025-09-07 13:31:07   Extracting queries features for evaluation/testing, time for each:0.009842491726018459
+2025-09-07 13:31:19   Calculating recalls
+2025-09-07 13:31:19   Retrieval time for each:0.00015078621941643793,0.11158180236816406/740
+2025-09-07 13:39:30   (740, 100), torch.Size([2, 100]), time:,1.2166104316711426, time each:, 0.6107732569849169
+2025-09-07 13:39:54   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.393
+rerank: R@1: 67.0, R@5: 79.2, R@10: 82.6, R@20: 84.9, R@100: 89.1
+2025-09-07 13:39:56   Not improved: 1 / 75: best R@1 = 70.5, current R@1 = 67.0
+2025-09-07 13:39:56   Start training epoch: 04
+2025-09-07 13:39:56   Cache: 0 / 2
+2025-09-07 13:50:45   global loss:0.05693325772881508
+2025-09-07 13:50:46   rerank loss:0.03160279989242554
+2025-09-07 13:50:47   global loss:0.08806777000427246
+2025-09-07 13:50:47   rerank loss:0.03488107770681381
+2025-09-07 14:10:59   Epoch[04](0/2): current batch triplet loss = 0.0095, average epoch triplet loss = 0.0294
+2025-09-07 14:10:59   Cache: 1 / 2
+2025-09-07 14:41:54   Epoch[04](1/2): current batch triplet loss = 0.0142, average epoch triplet loss = 0.0305
+2025-09-07 14:41:54   Finished epoch 04 in 1:01:57, average epoch triplet loss = 0.0305
+2025-09-07 14:41:54   Extracting database features for evaluation/testing
+2025-09-07 14:44:57   Extracting queries features for evaluation/testing, time for each:0.00961202720056675
+2025-09-07 14:45:05   Calculating recalls
+2025-09-07 14:45:06   Retrieval time for each:0.0001355519165863862,0.10030841827392578/740
+2025-09-07 14:53:19   (740, 100), torch.Size([2, 100]), time:,1.2136414051055908, time each:, 0.613508461939322
+2025-09-07 14:53:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.409
+rerank: R@1: 69.3, R@5: 81.1, R@10: 83.9, R@20: 85.7, R@100: 88.9
+2025-09-07 14:53:50   Not improved: 2 / 75: best R@1 = 70.5, current R@1 = 69.3
+2025-09-07 14:53:50   Start training epoch: 05
+2025-09-07 14:53:50   Cache: 0 / 2
+2025-09-07 15:04:39   global loss:0.06875462830066681
+2025-09-07 15:04:39   rerank loss:0.03977225720882416
+2025-09-07 15:04:41   global loss:0.06936199963092804
+2025-09-07 15:04:41   rerank loss:0.0255430880934
+2025-09-07 15:24:47   Epoch[05](0/2): current batch triplet loss = 0.0150, average epoch triplet loss = 0.0338
+2025-09-07 15:24:47   Cache: 1 / 2
+2025-09-07 15:55:57   Epoch[05](1/2): current batch triplet loss = 0.0143, average epoch triplet loss = 0.0340
+2025-09-07 15:55:57   Finished epoch 05 in 1:02:06, average epoch triplet loss = 0.0340
+2025-09-07 15:55:57   Extracting database features for evaluation/testing
+2025-09-07 15:59:00   Extracting queries features for evaluation/testing, time for each:0.009598777439577717
+2025-09-07 15:59:09   Calculating recalls
+2025-09-07 15:59:09   Retrieval time for each:0.00036429521199819205,0.2695784568786621/740
+2025-09-07 16:07:19   (740, 100), torch.Size([2, 100]), time:,1.2130494117736816, time each:, 0.6125833817430445
+2025-09-07 16:07:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.370
+rerank: R@1: 67.2, R@5: 78.9, R@10: 80.8, R@20: 82.8, R@100: 85.4
+2025-09-07 16:07:55   Not improved: 3 / 75: best R@1 = 70.5, current R@1 = 67.2
+2025-09-07 16:07:55   Start training epoch: 06
+2025-09-07 16:07:55   Cache: 0 / 2
+2025-09-07 16:18:44   global loss:0.06808396428823471
+2025-09-07 16:18:44   rerank loss:0.0552058219909668
+2025-09-07 16:18:45   global loss:0.06365953385829926
+2025-09-07 16:18:46   rerank loss:0.033030830323696136
+2025-09-07 16:38:56   Epoch[06](0/2): current batch triplet loss = 0.0211, average epoch triplet loss = 0.0312
+2025-09-07 16:38:56   Cache: 1 / 2
+2025-09-07 17:10:03   Epoch[06](1/2): current batch triplet loss = 0.0242, average epoch triplet loss = 0.0321
+2025-09-07 17:10:03   Finished epoch 06 in 1:02:08, average epoch triplet loss = 0.0321
+2025-09-07 17:10:03   Extracting database features for evaluation/testing
+2025-09-07 17:13:17   Extracting queries features for evaluation/testing, time for each:0.009608753496547754
+2025-09-07 17:13:26   Calculating recalls
+2025-09-07 17:13:26   Retrieval time for each:0.00016213011097263646,0.11997628211975098/740
+2025-09-07 17:21:36   (740, 100), torch.Size([2, 100]), time:,1.2041001319885254, time each:, 0.6141979211085552
+2025-09-07 17:22:04   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.392
+rerank: R@1: 67.3, R@5: 79.6, R@10: 82.4, R@20: 84.2, R@100: 87.7
+2025-09-07 17:22:07   Not improved: 4 / 75: best R@1 = 70.5, current R@1 = 67.3
+2025-09-07 17:22:07   Start training epoch: 07
+2025-09-07 17:22:07   Cache: 0 / 2
+2025-09-07 17:32:59   global loss:0.04361945390701294
+2025-09-07 17:33:00   rerank loss:0.055071283131837845
+2025-09-07 17:33:01   global loss:0.11593678593635559
+2025-09-07 17:33:02   rerank loss:0.044119659811258316
+2025-09-07 17:53:09   Epoch[07](0/2): current batch triplet loss = 0.0076, average epoch triplet loss = 0.0327
+2025-09-07 17:53:09   Cache: 1 / 2
+2025-09-07 18:24:19   Epoch[07](1/2): current batch triplet loss = 0.0166, average epoch triplet loss = 0.0328
+2025-09-07 18:24:19   Finished epoch 07 in 1:02:12, average epoch triplet loss = 0.0328
+2025-09-07 18:24:19   Extracting database features for evaluation/testing
+2025-09-07 18:27:26   Extracting queries features for evaluation/testing, time for each:0.009772887171044409
+2025-09-07 18:27:35   Calculating recalls
+2025-09-07 18:27:35   Retrieval time for each:0.00035307761785146355,0.261277437210083/740
+2025-09-07 18:35:49   (740, 100), torch.Size([2, 100]), time:,1.220473051071167, time each:, 0.6147373805174956
+2025-09-07 18:36:17   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.370
+rerank: R@1: 64.7, R@5: 77.2, R@10: 79.9, R@20: 82.0, R@100: 85.9
+2025-09-07 18:36:20   Not improved: 5 / 75: best R@1 = 70.5, current R@1 = 64.7
+2025-09-07 18:36:20   Start training epoch: 08
+2025-09-07 18:36:20   Cache: 0 / 2
+2025-09-07 18:47:13   global loss:0.0685199424624443
+2025-09-07 18:47:13   rerank loss:0.054259371012449265
+2025-09-07 18:47:15   global loss:0.06487877666950226
+2025-09-07 18:47:15   rerank loss:0.03551807999610901
+2025-09-07 19:07:22   Epoch[08](0/2): current batch triplet loss = 0.0290, average epoch triplet loss = 0.0323
+2025-09-07 19:07:22   Cache: 1 / 2
+2025-09-07 19:38:37   Epoch[08](1/2): current batch triplet loss = 0.0525, average epoch triplet loss = 0.0311
+2025-09-07 19:38:37   Finished epoch 08 in 1:02:17, average epoch triplet loss = 0.0311
+2025-09-07 19:38:37   Extracting database features for evaluation/testing
+2025-09-07 19:41:48   Extracting queries features for evaluation/testing, time for each:0.009705135208403992
+2025-09-07 19:41:58   Calculating recalls
+2025-09-07 19:41:58   Retrieval time for each:0.00013861076251880542,0.10257196426391602/740
+2025-09-07 19:50:08   (740, 100), torch.Size([2, 100]), time:,1.2099800109863281, time each:, 0.6151211242418031
+2025-09-07 19:50:36   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.371
+rerank: R@1: 61.8, R@5: 76.8, R@10: 81.2, R@20: 83.9, R@100: 87.0
+2025-09-07 19:50:43   Not improved: 6 / 75: best R@1 = 70.5, current R@1 = 61.8
+2025-09-07 19:50:43   Start training epoch: 09
+2025-09-07 19:50:43   Cache: 0 / 2
+2025-09-07 20:01:45   global loss:0.06455264985561371
+2025-09-07 20:01:46   rerank loss:0.10045760124921799
+2025-09-07 20:01:47   global loss:0.07932314276695251
+2025-09-07 20:01:48   rerank loss:0.05336274951696396
+2025-09-07 20:21:58   Epoch[09](0/2): current batch triplet loss = 0.0136, average epoch triplet loss = 0.0309
+2025-09-07 20:21:58   Cache: 1 / 2
+2025-09-07 20:52:59   Epoch[09](1/2): current batch triplet loss = 0.0527, average epoch triplet loss = 0.0312
+2025-09-07 20:52:59   Finished epoch 09 in 1:02:16, average epoch triplet loss = 0.0312
+2025-09-07 20:52:59   Extracting database features for evaluation/testing
+2025-09-07 20:56:02   Extracting queries features for evaluation/testing, time for each:0.009560807508919716
+2025-09-07 20:56:10   Calculating recalls
+2025-09-07 20:56:10   Retrieval time for each:0.0002391190142244906,0.17694807052612305/740
+2025-09-07 21:04:24   (740, 100), torch.Size([2, 100]), time:,1.2149701118469238, time each:, 0.6135812952711776
+2025-09-07 21:04:49   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.383
+rerank: R@1: 68.4, R@5: 79.5, R@10: 82.0, R@20: 83.8, R@100: 87.3
+2025-09-07 21:04:51   Not improved: 7 / 75: best R@1 = 70.5, current R@1 = 68.4
+2025-09-07 21:04:51   Start training epoch: 10
+2025-09-07 21:04:51   Cache: 0 / 2
+2025-09-07 21:15:53   global loss:0.035785794258117676
+2025-09-07 21:15:53   rerank loss:0.03376206383109093
+2025-09-07 21:15:54   global loss:0.0654437243938446
+2025-09-07 21:15:55   rerank loss:0.02386176772415638
+2025-09-07 21:36:01   Epoch[10](0/2): current batch triplet loss = 0.0059, average epoch triplet loss = 0.0278
+2025-09-07 21:36:01   Cache: 1 / 2
+2025-09-07 22:07:01   Epoch[10](1/2): current batch triplet loss = 0.0181, average epoch triplet loss = 0.0287
+2025-09-07 22:07:01   Finished epoch 10 in 1:02:09, average epoch triplet loss = 0.0287
+2025-09-07 22:07:01   Extracting database features for evaluation/testing
+2025-09-07 22:10:11   Extracting queries features for evaluation/testing, time for each:0.009664091786711099
+2025-09-07 22:10:19   Calculating recalls
+2025-09-07 22:10:19   Retrieval time for each:0.00014526682931023676,0.1074974536895752/740
+2025-09-07 22:18:25   (740, 100), torch.Size([2, 100]), time:,1.2169833183288574, time each:, 0.6146966773110467
+2025-09-07 22:18:53   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.392
+rerank: R@1: 66.6, R@5: 78.9, R@10: 83.2, R@20: 84.6, R@100: 87.4
+2025-09-07 22:18:56   Not improved: 8 / 75: best R@1 = 70.5, current R@1 = 66.6
+2025-09-07 22:18:56   Start training epoch: 11
+2025-09-07 22:18:56   Cache: 0 / 2
+2025-09-07 22:29:50   global loss:0.06573984026908875
+2025-09-07 22:29:50   rerank loss:0.06355538219213486
+2025-09-07 22:29:52   global loss:0.062044598162174225
+2025-09-07 22:29:52   rerank loss:0.03558163344860077
+2025-09-07 22:49:58   Epoch[11](0/2): current batch triplet loss = 0.0247, average epoch triplet loss = 0.0294
+2025-09-07 22:49:58   Cache: 1 / 2
+2025-09-07 23:20:58   Epoch[11](1/2): current batch triplet loss = 0.0044, average epoch triplet loss = 0.0286
+2025-09-07 23:20:58   Finished epoch 11 in 1:02:02, average epoch triplet loss = 0.0286
+2025-09-07 23:20:58   Extracting database features for evaluation/testing
+2025-09-07 23:24:03   Extracting queries features for evaluation/testing, time for each:0.009705183647640508
+2025-09-07 23:24:12   Calculating recalls
+2025-09-07 23:24:12   Retrieval time for each:0.0001565253412401354,0.1158287525177002/740
+2025-09-07 23:32:18   (740, 100), torch.Size([2, 100]), time:,1.2153329849243164, time each:, 0.6135827657338735
+2025-09-07 23:32:46   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.421
+rerank: R@1: 66.5, R@5: 81.9, R@10: 84.9, R@20: 87.2, R@100: 90.5
+2025-09-07 23:32:49   Not improved: 9 / 75: best R@1 = 70.5, current R@1 = 66.5
+2025-09-07 23:32:49   Start training epoch: 12
+2025-09-07 23:32:49   Cache: 0 / 2
+2025-09-07 23:43:47   global loss:0.029861263930797577
+2025-09-07 23:43:47   rerank loss:0.07435617595911026
+2025-09-07 23:43:49   global loss:0.04281838238239288
+2025-09-07 23:43:49   rerank loss:0.05090293288230896
+2025-09-08 00:03:56   Epoch[12](0/2): current batch triplet loss = 0.0067, average epoch triplet loss = 0.0291
+2025-09-08 00:03:56   Cache: 1 / 2
+2025-09-08 00:34:57   Epoch[12](1/2): current batch triplet loss = 0.0153, average epoch triplet loss = 0.0289
+2025-09-08 00:34:57   Finished epoch 12 in 1:02:07, average epoch triplet loss = 0.0289
+2025-09-08 00:34:57   Extracting database features for evaluation/testing
+2025-09-08 00:38:01   Extracting queries features for evaluation/testing, time for each:0.0096043528159152
+2025-09-08 00:38:11   Calculating recalls
+2025-09-08 00:38:11   Retrieval time for each:0.00013896033570573137,0.10283064842224121/740
+2025-09-08 00:46:15   (740, 100), torch.Size([2, 100]), time:,1.21519136428833, time each:, 0.6133271336555481
+2025-09-08 00:46:43   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.428
+rerank: R@1: 67.0, R@5: 84.3, R@10: 86.9, R@20: 88.6, R@100: 91.5
+2025-09-08 00:46:47   Not improved: 10 / 75: best R@1 = 70.5, current R@1 = 67.0
+2025-09-08 00:46:47   Start training epoch: 13
+2025-09-08 00:46:47   Cache: 0 / 2
+2025-09-08 00:57:43   global loss:0.050778578966856
+2025-09-08 00:57:44   rerank loss:0.04512953758239746
+2025-09-08 00:57:45   global loss:0.06754405796527863
+2025-09-08 00:57:45   rerank loss:0.03113706037402153
+2025-09-08 01:17:52   Epoch[13](0/2): current batch triplet loss = 0.0141, average epoch triplet loss = 0.0283
+2025-09-08 01:17:52   Cache: 1 / 2
+2025-09-08 01:48:53   Epoch[13](1/2): current batch triplet loss = 0.0095, average epoch triplet loss = 0.0281
+2025-09-08 01:48:53   Finished epoch 13 in 1:02:05, average epoch triplet loss = 0.0281
+2025-09-08 01:48:53   Extracting database features for evaluation/testing
+2025-09-08 01:51:57   Extracting queries features for evaluation/testing, time for each:0.009598380803847109
+2025-09-08 01:52:07   Calculating recalls
+2025-09-08 01:52:07   Retrieval time for each:0.0001364772384231155,0.10099315643310547/740
+2025-09-08 02:00:12   (740, 100), torch.Size([2, 100]), time:,1.2168443202972412, time each:, 0.6153662017873816
+2025-09-08 02:00:40   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.435
+rerank: R@1: 69.1, R@5: 82.6, R@10: 86.1, R@20: 89.1, R@100: 91.2
+2025-09-08 02:00:46   Not improved: 11 / 75: best R@1 = 70.5, current R@1 = 69.1
+2025-09-08 02:00:46   Start training epoch: 14
+2025-09-08 02:00:46   Cache: 0 / 2
+2025-09-08 02:11:40   global loss:0.042212896049022675
+2025-09-08 02:11:41   rerank loss:0.06368258595466614
+2025-09-08 02:11:42   global loss:0.05802295356988907
+2025-09-08 02:11:42   rerank loss:0.0511060431599617
+2025-09-08 02:31:49   Epoch[14](0/2): current batch triplet loss = 0.0300, average epoch triplet loss = 0.0283
+2025-09-08 02:31:49   Cache: 1 / 2
+2025-09-08 03:02:49   Epoch[14](1/2): current batch triplet loss = 0.0136, average epoch triplet loss = 0.0279
+2025-09-08 03:02:49   Finished epoch 14 in 1:02:03, average epoch triplet loss = 0.0279
+2025-09-08 03:02:49   Extracting database features for evaluation/testing
+2025-09-08 03:05:53   Extracting queries features for evaluation/testing, time for each:0.00958931267302566
+2025-09-08 03:06:04   Calculating recalls
+2025-09-08 03:06:04   Retrieval time for each:0.000169630630596264,0.12552666664123535/740
+2025-09-08 03:14:08   (740, 100), torch.Size([2, 100]), time:,1.2156198024749756, time each:, 0.6130869920189316
+2025-09-08 03:14:36   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.391
+rerank: R@1: 65.4, R@5: 79.2, R@10: 84.1, R@20: 86.4, R@100: 89.3
+2025-09-08 03:14:41   Not improved: 12 / 75: best R@1 = 70.5, current R@1 = 65.4
+2025-09-08 03:14:41   Start training epoch: 15
+2025-09-08 03:14:41   Cache: 0 / 2
+2025-09-08 03:25:33   global loss:0.029827382415533066
+2025-09-08 03:25:33   rerank loss:0.07744620740413666
+2025-09-08 03:25:35   global loss:0.035939451307058334
+2025-09-08 03:25:35   rerank loss:0.039052993059158325
+2025-09-08 03:45:42   Epoch[15](0/2): current batch triplet loss = 0.0099, average epoch triplet loss = 0.0268
+2025-09-08 03:45:42   Cache: 1 / 2
+2025-09-08 04:16:43   Epoch[15](1/2): current batch triplet loss = 0.0425, average epoch triplet loss = 0.0268
+2025-09-08 04:16:43   Finished epoch 15 in 1:02:02, average epoch triplet loss = 0.0268
+2025-09-08 04:16:43   Extracting database features for evaluation/testing
+2025-09-08 04:19:46   Extracting queries features for evaluation/testing, time for each:0.009516189046684581
+2025-09-08 04:20:03   Calculating recalls
+2025-09-08 04:20:03   Retrieval time for each:0.00017048635998287716,0.1261599063873291/740
+2025-09-08 04:28:11   (740, 100), torch.Size([2, 100]), time:,1.208543300628662, time each:, 0.6116469692539525
+2025-09-08 04:28:39   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.428
+rerank: R@1: 70.3, R@5: 82.4, R@10: 85.5, R@20: 87.8, R@100: 90.5
+2025-09-08 04:28:44   Not improved: 13 / 75: best R@1 = 70.5, current R@1 = 70.3
+2025-09-08 04:28:44   Start training epoch: 16
+2025-09-08 04:28:44   Cache: 0 / 2
+2025-09-08 04:39:28   global loss:0.06484237313270569
+2025-09-08 04:39:28   rerank loss:0.05141594260931015
+2025-09-08 04:39:29   global loss:0.04377901926636696
+2025-09-08 04:39:30   rerank loss:0.03239699453115463
+2025-09-08 04:59:35   Epoch[16](0/2): current batch triplet loss = 0.0125, average epoch triplet loss = 0.0275
+2025-09-08 04:59:35   Cache: 1 / 2
+2025-09-08 05:30:48   Epoch[16](1/2): current batch triplet loss = 0.0039, average epoch triplet loss = 0.0267
+2025-09-08 05:30:48   Finished epoch 16 in 1:02:04, average epoch triplet loss = 0.0267
+2025-09-08 05:30:48   Extracting database features for evaluation/testing
+2025-09-08 05:33:50   Extracting queries features for evaluation/testing, time for each:0.00947899025250022
+2025-09-08 05:34:01   Calculating recalls
+2025-09-08 05:34:01   Retrieval time for each:0.00016340339505994643,0.12091851234436035/740
+2025-09-08 05:42:04   (740, 100), torch.Size([2, 100]), time:,1.211841106414795, time each:, 0.6106625128436733
+2025-09-08 05:42:29   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.432
+rerank: R@1: 69.7, R@5: 83.2, R@10: 85.8, R@20: 87.7, R@100: 91.2
+2025-09-08 05:42:34   Not improved: 14 / 75: best R@1 = 70.5, current R@1 = 69.7
+2025-09-08 05:42:34   Start training epoch: 17
+2025-09-08 05:42:34   Cache: 0 / 2
+2025-09-08 05:53:25   global loss:0.05837232992053032
+2025-09-08 05:53:25   rerank loss:0.037051185965538025
+2025-09-08 05:53:27   global loss:0.03887659311294556
+2025-09-08 05:53:27   rerank loss:0.022315029054880142
+2025-09-08 06:13:31   Epoch[17](0/2): current batch triplet loss = 0.0133, average epoch triplet loss = 0.0256
+2025-09-08 06:13:31   Cache: 1 / 2
+2025-09-08 06:44:34   Epoch[17](1/2): current batch triplet loss = 0.0396, average epoch triplet loss = 0.0252
+2025-09-08 06:44:34   Finished epoch 17 in 1:01:59, average epoch triplet loss = 0.0252
+2025-09-08 06:44:34   Extracting database features for evaluation/testing
+2025-09-08 06:47:36   Extracting queries features for evaluation/testing, time for each:0.009495493174420461
+2025-09-08 06:47:46   Calculating recalls
+2025-09-08 06:47:46   Retrieval time for each:0.0001642391488358781,0.1215369701385498/740
+2025-09-08 06:55:55   (740, 100), torch.Size([2, 100]), time:,1.2125678062438965, time each:, 0.6104713591369423
+2025-09-08 06:56:23   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.434
+rerank: R@1: 69.6, R@5: 82.6, R@10: 86.1, R@20: 88.1, R@100: 90.7
+2025-09-08 06:56:29   Not improved: 15 / 75: best R@1 = 70.5, current R@1 = 69.6
+2025-09-08 06:56:29   Start training epoch: 18
+2025-09-08 06:56:29   Cache: 0 / 2
+2025-09-08 07:07:21   global loss:0.03908799588680267
+2025-09-08 07:07:21   rerank loss:0.059113383293151855
+2025-09-08 07:07:22   global loss:0.0678369402885437
+2025-09-08 07:07:23   rerank loss:0.04448894411325455
+2025-09-08 07:27:27   Epoch[18](0/2): current batch triplet loss = 0.0116, average epoch triplet loss = 0.0248
+2025-09-08 07:27:27   Cache: 1 / 2
+2025-09-08 07:58:26   Epoch[18](1/2): current batch triplet loss = 0.0057, average epoch triplet loss = 0.0250
+2025-09-08 07:58:26   Finished epoch 18 in 1:01:56, average epoch triplet loss = 0.0250
+2025-09-08 07:58:26   Extracting database features for evaluation/testing
+2025-09-08 08:01:27   Extracting queries features for evaluation/testing, time for each:0.009467173934102874
+2025-09-08 08:01:37   Calculating recalls
+2025-09-08 08:01:37   Retrieval time for each:0.00015808472762236724,0.11698269844055176/740
+2025-09-08 08:09:46   (740, 100), torch.Size([2, 100]), time:,1.2843389511108398, time each:, 0.6099260256097123
+2025-09-08 08:10:12   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.424
+rerank: R@1: 69.1, R@5: 82.7, R@10: 86.4, R@20: 88.1, R@100: 91.1
+2025-09-08 08:10:17   Not improved: 16 / 75: best R@1 = 70.5, current R@1 = 69.1
+2025-09-08 08:10:17   Start training epoch: 19
+2025-09-08 08:10:17   Cache: 0 / 2
+2025-09-08 08:21:01   global loss:0.06359489262104034
+2025-09-08 08:21:02   rerank loss:0.04960803687572479
+2025-09-08 08:21:03   global loss:0.03383910655975342
+2025-09-08 08:21:03   rerank loss:0.03327568620443344
+2025-09-08 08:41:13   Epoch[19](0/2): current batch triplet loss = 0.0093, average epoch triplet loss = 0.0232
+2025-09-08 08:41:13   Cache: 1 / 2
+2025-09-08 09:12:13   Epoch[19](1/2): current batch triplet loss = 0.0061, average epoch triplet loss = 0.0237
+2025-09-08 09:12:13   Finished epoch 19 in 1:01:56, average epoch triplet loss = 0.0237
+2025-09-08 09:12:13   Extracting database features for evaluation/testing
+2025-09-08 09:15:17   Extracting queries features for evaluation/testing, time for each:0.009573830335749572
+2025-09-08 09:15:27   Calculating recalls
+2025-09-08 09:15:27   Retrieval time for each:0.0001663104907886402,0.12306976318359375/740
+2025-09-08 09:23:40   (740, 100), torch.Size([2, 100]), time:,1.212303638458252, time each:, 0.6079302243284277
+2025-09-08 09:24:04   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.449
+rerank: R@1: 71.1, R@5: 83.0, R@10: 85.5, R@20: 88.1, R@100: 90.9
+2025-09-08 09:24:11   Improved: previous best R@1 = 70.5, current R@1 = 71.1
+2025-09-08 09:24:11   Start training epoch: 20
+2025-09-08 09:24:11   Cache: 0 / 2
+2025-09-08 09:35:01   global loss:0.05123976245522499
+2025-09-08 09:35:02   rerank loss:0.04106314852833748
+2025-09-08 09:35:03   global loss:0.02810315415263176
+2025-09-08 09:35:04   rerank loss:0.027079593390226364
+2025-09-08 09:55:08   Epoch[20](0/2): current batch triplet loss = 0.0122, average epoch triplet loss = 0.0244
+2025-09-08 09:55:08   Cache: 1 / 2
+2025-09-08 10:25:57   Epoch[20](1/2): current batch triplet loss = 0.0070, average epoch triplet loss = 0.0237
+2025-09-08 10:25:57   Finished epoch 20 in 1:01:45, average epoch triplet loss = 0.0237
+2025-09-08 10:25:57   Extracting database features for evaluation/testing
+2025-09-08 10:28:58   Extracting queries features for evaluation/testing, time for each:0.009436008692811084
+2025-09-08 10:29:08   Calculating recalls
+2025-09-08 10:29:08   Retrieval time for each:0.00014127621779570708,0.10454440116882324/740
+2025-09-08 10:37:13   (740, 100), torch.Size([2, 100]), time:,1.2251965999603271, time each:, 0.6095470357585597
+2025-09-08 10:37:41   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.459
+rerank: R@1: 73.2, R@5: 83.6, R@10: 86.2, R@20: 88.2, R@100: 91.1
+2025-09-08 10:37:50   Improved: previous best R@1 = 71.1, current R@1 = 73.2
+2025-09-08 10:37:50   Start training epoch: 21
+2025-09-08 10:37:50   Cache: 0 / 2
+2025-09-08 10:48:38   global loss:0.048017796128988266
+2025-09-08 10:48:38   rerank loss:0.0655738040804863
+2025-09-08 10:48:40   global loss:0.023135200142860413
+2025-09-08 10:48:40   rerank loss:0.02417272888123989
+2025-09-08 11:08:44   Epoch[21](0/2): current batch triplet loss = 0.0273, average epoch triplet loss = 0.0242
+2025-09-08 11:08:44   Cache: 1 / 2
+2025-09-08 11:39:43   Epoch[21](1/2): current batch triplet loss = 0.0059, average epoch triplet loss = 0.0239
+2025-09-08 11:39:43   Finished epoch 21 in 1:01:53, average epoch triplet loss = 0.0239
+2025-09-08 11:39:43   Extracting database features for evaluation/testing
+2025-09-08 11:42:47   Extracting queries features for evaluation/testing, time for each:0.009543488359332533
+2025-09-08 11:42:57   Calculating recalls
+2025-09-08 11:42:58   Retrieval time for each:0.00019687639700399862,0.14568853378295898/740
+2025-09-08 11:51:00   (740, 100), torch.Size([2, 100]), time:,1.2158808708190918, time each:, 0.6116274047542263
+2025-09-08 11:51:28   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.456
+rerank: R@1: 71.9, R@5: 83.6, R@10: 86.1, R@20: 88.8, R@100: 92.0
+2025-09-08 11:51:33   Not improved: 1 / 75: best R@1 = 73.2, current R@1 = 71.9
+2025-09-08 11:51:33   Start training epoch: 22
+2025-09-08 11:51:33   Cache: 0 / 2
+2025-09-08 12:02:19   global loss:0.018323959782719612
+2025-09-08 12:02:20   rerank loss:0.025756465271115303
+2025-09-08 12:02:21   global loss:0.02586357854306698
+2025-09-08 12:02:22   rerank loss:0.013502344489097595
+2025-09-08 12:22:28   Epoch[22](0/2): current batch triplet loss = 0.0036, average epoch triplet loss = 0.0231
+2025-09-08 12:22:28   Cache: 1 / 2
+2025-09-08 12:53:24   Epoch[22](1/2): current batch triplet loss = 0.0208, average epoch triplet loss = 0.0232
+2025-09-08 12:53:24   Finished epoch 22 in 1:01:51, average epoch triplet loss = 0.0232
+2025-09-08 12:53:24   Extracting database features for evaluation/testing
+2025-09-08 12:56:28   Extracting queries features for evaluation/testing, time for each:0.009569950143178237
+2025-09-08 12:56:37   Calculating recalls
+2025-09-08 12:56:37   Retrieval time for each:0.0001427093067684689,0.10560488700866699/740
+2025-09-08 13:04:45   (740, 100), torch.Size([2, 100]), time:,1.241429328918457, time each:, 0.6132169491535908
+2025-09-08 13:05:09   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.460
+rerank: R@1: 69.9, R@5: 83.8, R@10: 87.3, R@20: 88.8, R@100: 91.5
+2025-09-08 13:05:13   Not improved: 2 / 75: best R@1 = 73.2, current R@1 = 69.9
+2025-09-08 13:05:13   Start training epoch: 23
+2025-09-08 13:05:13   Cache: 0 / 2
+2025-09-08 13:16:09   global loss:0.03134361281991005
+2025-09-08 13:16:10   rerank loss:0.04658395051956177
+2025-09-08 13:16:11   global loss:0.022030189633369446
+2025-09-08 13:16:11   rerank loss:0.03193897753953934
+2025-09-08 13:36:27   Epoch[23](0/2): current batch triplet loss = 0.0069, average epoch triplet loss = 0.0221
+2025-09-08 13:36:27   Cache: 1 / 2
+2025-09-08 14:07:31   Epoch[23](1/2): current batch triplet loss = 0.0037, average epoch triplet loss = 0.0222
+2025-09-08 14:07:31   Finished epoch 23 in 1:02:18, average epoch triplet loss = 0.0222
+2025-09-08 14:07:31   Extracting database features for evaluation/testing
+2025-09-08 14:10:36   Extracting queries features for evaluation/testing, time for each:0.009605420525846835
+2025-09-08 14:10:46   Calculating recalls
+2025-09-08 14:10:46   Retrieval time for each:0.0001562907889082625,0.11565518379211426/740
+2025-09-08 14:18:58   (740, 100), torch.Size([2, 100]), time:,1.2151260375976562, time each:, 0.6143466359860188
+2025-09-08 14:19:22   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.469
+rerank: R@1: 71.9, R@5: 85.1, R@10: 87.4, R@20: 88.9, R@100: 92.3
+2025-09-08 14:19:26   Not improved: 3 / 75: best R@1 = 73.2, current R@1 = 71.9
+2025-09-08 14:19:26   Start training epoch: 24
+2025-09-08 14:19:26   Cache: 0 / 2
+2025-09-08 14:30:16   global loss:0.02206866629421711
+2025-09-08 14:30:16   rerank loss:0.04417875036597252
+2025-09-08 14:30:18   global loss:0.03893900662660599
+2025-09-08 14:30:18   rerank loss:0.03835500404238701
+2025-09-08 14:50:36   Epoch[24](0/2): current batch triplet loss = 0.0163, average epoch triplet loss = 0.0218
+2025-09-08 14:50:36   Cache: 1 / 2
+2025-09-08 15:22:00   Epoch[24](1/2): current batch triplet loss = 0.0054, average epoch triplet loss = 0.0220
+2025-09-08 15:22:00   Finished epoch 24 in 1:02:34, average epoch triplet loss = 0.0220
+2025-09-08 15:22:00   Extracting database features for evaluation/testing
+2025-09-08 15:25:04   Extracting queries features for evaluation/testing, time for each:0.00958451889421759
+2025-09-08 15:25:15   Calculating recalls
+2025-09-08 15:25:15   Retrieval time for each:0.000176204539634086,0.13039135932922363/740
+2025-09-08 15:33:19   (740, 100), torch.Size([2, 100]), time:,1.216994047164917, time each:, 0.6131716435020035
+2025-09-08 15:33:47   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.480
+rerank: R@1: 73.2, R@5: 86.9, R@10: 89.7, R@20: 90.5, R@100: 93.5
+2025-09-08 15:33:51   Not improved: 4 / 75: best R@1 = 73.2, current R@1 = 73.2
+2025-09-08 15:33:51   Start training epoch: 25
+2025-09-08 15:33:51   Cache: 0 / 2
+2025-09-08 15:44:41   global loss:0.04790841042995453
+2025-09-08 15:44:41   rerank loss:0.04797762632369995
+2025-09-08 15:44:43   global loss:0.015401758253574371
+2025-09-08 15:44:43   rerank loss:0.026122255250811577
+2025-09-08 16:04:50   Epoch[25](0/2): current batch triplet loss = 0.0479, average epoch triplet loss = 0.0233
+2025-09-08 16:04:50   Cache: 1 / 2
+2025-09-08 16:36:00   Epoch[25](1/2): current batch triplet loss = 0.0094, average epoch triplet loss = 0.0225
+2025-09-08 16:36:00   Finished epoch 25 in 1:02:08, average epoch triplet loss = 0.0225
+2025-09-08 16:36:00   Extracting database features for evaluation/testing
+2025-09-08 16:39:05   Extracting queries features for evaluation/testing, time for each:0.009626194502273745
+2025-09-08 16:39:14   Calculating recalls
+2025-09-08 16:39:14   Retrieval time for each:0.0001711181692174963,0.12662744522094727/740
+2025-09-08 16:47:23   (740, 100), torch.Size([2, 100]), time:,1.216409683227539, time each:, 0.6143940271557988
+2025-09-08 16:47:51   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.488
+rerank: R@1: 74.3, R@5: 84.5, R@10: 87.8, R@20: 89.2, R@100: 92.3
+2025-09-08 16:47:59   Improved: previous best R@1 = 73.2, current R@1 = 74.3
+2025-09-08 16:47:59   Start training epoch: 26
+2025-09-08 16:47:59   Cache: 0 / 2
+2025-09-08 16:58:36   global loss:0.03278524801135063
+2025-09-08 16:58:36   rerank loss:0.030747676268219948
+2025-09-08 16:58:38   global loss:0.018000494688749313
+2025-09-08 16:58:38   rerank loss:0.03114396147429943
+2025-09-08 17:18:45   Epoch[26](0/2): current batch triplet loss = 0.0138, average epoch triplet loss = 0.0220
+2025-09-08 17:18:45   Cache: 1 / 2
+2025-09-08 17:49:35   Epoch[26](1/2): current batch triplet loss = 0.0088, average epoch triplet loss = 0.0207
+2025-09-08 17:49:35   Finished epoch 26 in 1:01:36, average epoch triplet loss = 0.0207
+2025-09-08 17:49:35   Extracting database features for evaluation/testing
+2025-09-08 17:52:39   Extracting queries features for evaluation/testing, time for each:0.009551809345884345
+2025-09-08 17:52:48   Calculating recalls
+2025-09-08 17:52:48   Retrieval time for each:0.000160802377236856,0.11899375915527344/740
+2025-09-08 18:00:56   (740, 100), torch.Size([2, 100]), time:,1.2126202583312988, time each:, 0.6133163355492257
+2025-09-08 18:01:20   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.472
+rerank: R@1: 70.9, R@5: 84.5, R@10: 87.2, R@20: 89.9, R@100: 93.4
+2025-09-08 18:01:25   Not improved: 1 / 75: best R@1 = 74.3, current R@1 = 70.9
+2025-09-08 18:01:25   Start training epoch: 27
+2025-09-08 18:01:25   Cache: 0 / 2
+2025-09-08 18:12:13   global loss:0.012744907289743423
+2025-09-08 18:12:14   rerank loss:0.04014173150062561
+2025-09-08 18:12:15   global loss:0.013354092836380005
+2025-09-08 18:12:15   rerank loss:0.025228863582015038
+2025-09-08 18:32:23   Epoch[27](0/2): current batch triplet loss = 0.0108, average epoch triplet loss = 0.0204
+2025-09-08 18:32:23   Cache: 1 / 2
+2025-09-08 19:03:13   Epoch[27](1/2): current batch triplet loss = 0.0188, average epoch triplet loss = 0.0206
+2025-09-08 19:03:13   Finished epoch 27 in 1:01:48, average epoch triplet loss = 0.0206
+2025-09-08 19:03:13   Extracting database features for evaluation/testing
+2025-09-08 19:06:16   Extracting queries features for evaluation/testing, time for each:0.009579454820932212
+2025-09-08 19:06:26   Calculating recalls
+2025-09-08 19:06:27   Retrieval time for each:0.00014402318645167996,0.10657715797424316/740
+2025-09-08 19:14:37   (740, 100), torch.Size([2, 100]), time:,1.229142665863037, time each:, 0.6131964313017355
+2025-09-08 19:15:04   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.507
+rerank: R@1: 75.4, R@5: 85.9, R@10: 88.6, R@20: 90.7, R@100: 92.7
+2025-09-08 19:15:17   Improved: previous best R@1 = 74.3, current R@1 = 75.4
+2025-09-08 19:15:17   Start training epoch: 28
+2025-09-08 19:15:17   Cache: 0 / 2
+2025-09-08 19:26:15   global loss:0.009048670530319214
+2025-09-08 19:26:15   rerank loss:0.016729161143302917
+2025-09-08 19:26:17   global loss:0.028610147535800934
+2025-09-08 19:26:17   rerank loss:0.018545499071478844
+2025-09-08 19:46:35   Epoch[28](0/2): current batch triplet loss = 0.0028, average epoch triplet loss = 0.0199
+2025-09-08 19:46:35   Cache: 1 / 2
+2025-09-08 20:17:53   Epoch[28](1/2): current batch triplet loss = 0.0180, average epoch triplet loss = 0.0198
+2025-09-08 20:17:53   Finished epoch 28 in 1:02:36, average epoch triplet loss = 0.0198
+2025-09-08 20:17:53   Extracting database features for evaluation/testing
+2025-09-08 20:21:01   Extracting queries features for evaluation/testing, time for each:0.009788967051912104
+2025-09-08 20:21:13   Calculating recalls
+2025-09-08 20:21:13   Retrieval time for each:0.00013576617112030854,0.10046696662902832/740
+2025-09-08 20:29:28   (740, 100), torch.Size([2, 100]), time:,1.2138264179229736, time each:, 0.613493820461067
+2025-09-08 20:29:56   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.507
+rerank: R@1: 75.4, R@5: 86.4, R@10: 88.0, R@20: 90.4, R@100: 92.3
+2025-09-08 20:30:01   Not improved: 1 / 75: best R@1 = 75.4, current R@1 = 75.4
+2025-09-08 20:30:01   Start training epoch: 29
+2025-09-08 20:30:01   Cache: 0 / 2
+2025-09-08 20:40:56   global loss:0.042976200580596924
+2025-09-08 20:40:57   rerank loss:0.06212649494409561
+2025-09-08 20:40:58   global loss:0.012116171419620514
+2025-09-08 20:40:59   rerank loss:0.03660620003938675
+2025-09-08 21:01:06   Epoch[29](0/2): current batch triplet loss = 0.0049, average epoch triplet loss = 0.0179
+2025-09-08 21:01:06   Cache: 1 / 2
+2025-09-08 21:32:05   Epoch[29](1/2): current batch triplet loss = 0.0171, average epoch triplet loss = 0.0183
+2025-09-08 21:32:05   Finished epoch 29 in 1:02:04, average epoch triplet loss = 0.0183
+2025-09-08 21:32:05   Extracting database features for evaluation/testing
+2025-09-08 21:35:09   Extracting queries features for evaluation/testing, time for each:0.009572472521032112
+2025-09-08 21:35:19   Calculating recalls
+2025-09-08 21:35:19   Retrieval time for each:0.00015488766335152292,0.11461687088012695/740
+2025-09-08 21:43:26   (740, 100), torch.Size([2, 100]), time:,1.2169430255889893, time each:, 0.614155713609747
+2025-09-08 21:43:54   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.491
+rerank: R@1: 74.3, R@5: 85.4, R@10: 88.0, R@20: 89.7, R@100: 92.0
+2025-09-08 21:43:59   Not improved: 2 / 75: best R@1 = 75.4, current R@1 = 74.3
+2025-09-08 21:43:59   Start training epoch: 30
+2025-09-08 21:43:59   Cache: 0 / 2
+2025-09-08 21:54:42   global loss:0.01579440012574196
+2025-09-08 21:54:43   rerank loss:0.01623436063528061
+2025-09-08 21:54:44   global loss:0.034617554396390915
+2025-09-08 21:54:44   rerank loss:0.029128422960639
+2025-09-08 22:14:52   Epoch[30](0/2): current batch triplet loss = 0.0197, average epoch triplet loss = 0.0184
+2025-09-08 22:14:52   Cache: 1 / 2
+2025-09-08 22:45:53   Epoch[30](1/2): current batch triplet loss = 0.0074, average epoch triplet loss = 0.0189
+2025-09-08 22:45:53   Finished epoch 30 in 1:01:54, average epoch triplet loss = 0.0189
+2025-09-08 22:45:53   Extracting database features for evaluation/testing
+2025-09-08 22:48:56   Extracting queries features for evaluation/testing, time for each:0.009558631874635523
+2025-09-08 22:49:06   Calculating recalls
+2025-09-08 22:49:06   Retrieval time for each:0.0001899058754379685,0.14053034782409668/740
+2025-09-08 22:57:12   (740, 100), torch.Size([2, 100]), time:,1.216629981994629, time each:, 0.6150401920885653
+2025-09-08 22:57:40   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.490
+rerank: R@1: 73.5, R@5: 85.1, R@10: 87.6, R@20: 90.4, R@100: 93.0
+2025-09-08 22:57:45   Not improved: 3 / 75: best R@1 = 75.4, current R@1 = 73.5
+2025-09-08 22:57:45   Start training epoch: 31
+2025-09-08 22:57:45   Cache: 0 / 2
+2025-09-08 23:08:33   global loss:0.010077591985464096
+2025-09-08 23:08:34   rerank loss:0.02955990843474865
+2025-09-08 23:08:35   global loss:0.004246830940246582
+2025-09-08 23:08:36   rerank loss:0.02367694117128849
+2025-09-08 23:28:43   Epoch[31](0/2): current batch triplet loss = 0.0060, average epoch triplet loss = 0.0186
+2025-09-08 23:28:43   Cache: 1 / 2
+2025-09-08 23:59:44   Epoch[31](1/2): current batch triplet loss = 0.0031, average epoch triplet loss = 0.0190
+2025-09-08 23:59:44   Finished epoch 31 in 1:01:59, average epoch triplet loss = 0.0190
+2025-09-08 23:59:44   Extracting database features for evaluation/testing
+2025-09-09 00:02:47   Extracting queries features for evaluation/testing, time for each:0.0095339039476136
+2025-09-09 00:02:57   Calculating recalls
+2025-09-09 00:02:58   Retrieval time for each:0.00013890620824452994,0.10279059410095215/740
+2025-09-09 00:11:02   (740, 100), torch.Size([2, 100]), time:,1.2152924537658691, time each:, 0.6139774944331194
+2025-09-09 00:11:31   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.486
+rerank: R@1: 71.5, R@5: 85.1, R@10: 88.0, R@20: 89.3, R@100: 92.3
+2025-09-09 00:11:35   Not improved: 4 / 75: best R@1 = 75.4, current R@1 = 71.5
+2025-09-09 00:11:35   Start training epoch: 32
+2025-09-09 00:11:35   Cache: 0 / 2
+2025-09-09 00:22:17   global loss:0.007301099598407745
+2025-09-09 00:22:17   rerank loss:0.017325332388281822
+2025-09-09 00:22:19   global loss:0.0011036358773708344
+2025-09-09 00:22:19   rerank loss:0.01289223413914442
+2025-09-09 00:42:27   Epoch[32](0/2): current batch triplet loss = 0.0156, average epoch triplet loss = 0.0178
+2025-09-09 00:42:27   Cache: 1 / 2
+2025-09-09 01:13:26   Epoch[32](1/2): current batch triplet loss = 0.0140, average epoch triplet loss = 0.0177
+2025-09-09 01:13:26   Finished epoch 32 in 1:01:51, average epoch triplet loss = 0.0177
+2025-09-09 01:13:26   Extracting database features for evaluation/testing
+2025-09-09 01:16:30   Extracting queries features for evaluation/testing, time for each:0.009545842311661635
+2025-09-09 01:16:39   Calculating recalls
+2025-09-09 01:16:40   Retrieval time for each:0.00015615353713164458,0.11555361747741699/740
+2025-09-09 01:24:45   (740, 100), torch.Size([2, 100]), time:,1.2178142070770264, time each:, 0.61516193151474
+2025-09-09 01:25:14   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.485
+rerank: R@1: 73.9, R@5: 85.7, R@10: 88.2, R@20: 90.3, R@100: 94.2
+2025-09-09 01:25:19   Not improved: 5 / 75: best R@1 = 75.4, current R@1 = 73.9
+2025-09-09 01:25:19   Start training epoch: 33
+2025-09-09 01:25:19   Cache: 0 / 2
+2025-09-09 01:36:20   global loss:0.018987730145454407
+2025-09-09 01:36:20   rerank loss:0.02772078663110733
+2025-09-09 01:36:22   global loss:0.016377896070480347
+2025-09-09 01:36:22   rerank loss:0.028616296127438545
+2025-09-09 01:56:30   Epoch[33](0/2): current batch triplet loss = 0.0097, average epoch triplet loss = 0.0169
+2025-09-09 01:56:30   Cache: 1 / 2
+2025-09-09 02:27:44   Epoch[33](1/2): current batch triplet loss = 0.0088, average epoch triplet loss = 0.0172
+2025-09-09 02:27:44   Finished epoch 33 in 1:02:24, average epoch triplet loss = 0.0172
+2025-09-09 02:27:44   Extracting database features for evaluation/testing
+2025-09-09 02:30:47   Extracting queries features for evaluation/testing, time for each:0.009634288630471131
+2025-09-09 02:30:56   Calculating recalls
+2025-09-09 02:30:56   Retrieval time for each:0.00016021245234721415,0.11855721473693848/740
+2025-09-09 02:39:07   (740, 100), torch.Size([2, 100]), time:,1.2168138027191162, time each:, 0.614868590316257
+2025-09-09 02:39:31   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.497
+rerank: R@1: 74.1, R@5: 86.6, R@10: 88.4, R@20: 90.5, R@100: 93.5
+2025-09-09 02:39:35   Not improved: 6 / 75: best R@1 = 75.4, current R@1 = 74.1
+2025-09-09 02:39:35   Start training epoch: 34
+2025-09-09 02:39:35   Cache: 0 / 2
+2025-09-09 02:50:25   global loss:0.026575136929750443
+2025-09-09 02:50:25   rerank loss:0.02253652736544609
+2025-09-09 02:50:27   global loss:0.02685338258743286
+2025-09-09 02:50:27   rerank loss:0.04481794685125351
+2025-09-09 03:10:35   Epoch[34](0/2): current batch triplet loss = 0.0153, average epoch triplet loss = 0.0181
+2025-09-09 03:10:35   Cache: 1 / 2
+2025-09-09 03:41:30   Epoch[34](1/2): current batch triplet loss = 0.0135, average epoch triplet loss = 0.0177
+2025-09-09 03:41:30   Finished epoch 34 in 1:01:54, average epoch triplet loss = 0.0177
+2025-09-09 03:41:30   Extracting database features for evaluation/testing
+2025-09-09 03:44:33   Extracting queries features for evaluation/testing, time for each:0.009545174977161706
+2025-09-09 03:44:43   Calculating recalls
+2025-09-09 03:44:43   Retrieval time for each:0.0001677004066673485,0.12409830093383789/740
+2025-09-09 03:52:56   (740, 100), torch.Size([2, 100]), time:,1.249190092086792, time each:, 0.6141957705085342
+2025-09-09 03:53:23   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.515
+rerank: R@1: 75.7, R@5: 86.5, R@10: 88.2, R@20: 90.0, R@100: 93.1
+2025-09-09 03:53:32   Improved: previous best R@1 = 75.4, current R@1 = 75.7
+2025-09-09 03:53:32   Start training epoch: 35
+2025-09-09 03:53:32   Cache: 0 / 2
+2025-09-09 04:04:27   global loss:0.007870972156524658
+2025-09-09 04:04:28   rerank loss:0.027433710172772408
+2025-09-09 04:04:29   global loss:0.034074634313583374
+2025-09-09 04:04:30   rerank loss:0.032735198736190796
+2025-09-09 04:24:37   Epoch[35](0/2): current batch triplet loss = 0.0046, average epoch triplet loss = 0.0166
+2025-09-09 04:24:37   Cache: 1 / 2
+2025-09-09 04:56:05   Epoch[35](1/2): current batch triplet loss = 0.0069, average epoch triplet loss = 0.0167
+2025-09-09 04:56:05   Finished epoch 35 in 1:02:33, average epoch triplet loss = 0.0167
+2025-09-09 04:56:05   Extracting database features for evaluation/testing
+2025-09-09 04:59:08   Extracting queries features for evaluation/testing, time for each:0.009614536527369159
+2025-09-09 04:59:17   Calculating recalls
+2025-09-09 04:59:17   Retrieval time for each:0.00014432539811005463,0.10680079460144043/740
+2025-09-09 05:07:31   (740, 100), torch.Size([2, 100]), time:,1.2182443141937256, time each:, 0.6155762479111955
+2025-09-09 05:07:59   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.516
+rerank: R@1: 76.2, R@5: 86.1, R@10: 89.6, R@20: 91.4, R@100: 93.4
+2025-09-09 05:08:05   Improved: previous best R@1 = 75.7, current R@1 = 76.2
+2025-09-09 05:08:05   Start training epoch: 36
+2025-09-09 05:08:05   Cache: 0 / 2
+2025-09-09 05:18:49   global loss:0.010228337720036507
+2025-09-09 05:18:49   rerank loss:0.018691645935177803
+2025-09-09 05:18:50   global loss:0.008156899362802505
+2025-09-09 05:18:51   rerank loss:0.034199442714452744
+2025-09-09 05:39:00   Epoch[36](0/2): current batch triplet loss = 0.0059, average epoch triplet loss = 0.0168
+2025-09-09 05:39:00   Cache: 1 / 2
+2025-09-09 06:10:09   Epoch[36](1/2): current batch triplet loss = 0.0127, average epoch triplet loss = 0.0164
+2025-09-09 06:10:09   Finished epoch 36 in 1:02:04, average epoch triplet loss = 0.0164
+2025-09-09 06:10:09   Extracting database features for evaluation/testing
+2025-09-09 06:13:13   Extracting queries features for evaluation/testing, time for each:0.009679291157482173
+2025-09-09 06:13:21   Calculating recalls
+2025-09-09 06:13:21   Retrieval time for each:0.0001768402151159338,0.13086175918579102/740
+2025-09-09 06:21:29   (740, 100), torch.Size([2, 100]), time:,1.2307710647583008, time each:, 0.6125308561969448
+2025-09-09 06:21:53   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.527
+rerank: R@1: 77.4, R@5: 88.2, R@10: 89.5, R@20: 92.3, R@100: 94.1
+2025-09-09 06:21:58   Improved: previous best R@1 = 76.2, current R@1 = 77.4
+2025-09-09 06:21:58   Start training epoch: 37
+2025-09-09 06:21:58   Cache: 0 / 2
+2025-09-09 06:32:49   global loss:0.005776654928922653
+2025-09-09 06:32:49   rerank loss:0.01404241006821394
+2025-09-09 06:32:50   global loss:0.011374961584806442
+2025-09-09 06:32:51   rerank loss:0.023418011143803596
+2025-09-09 06:52:55   Epoch[37](0/2): current batch triplet loss = 0.0067, average epoch triplet loss = 0.0155
+2025-09-09 06:52:55   Cache: 1 / 2
+2025-09-09 07:23:47   Epoch[37](1/2): current batch triplet loss = 0.0076, average epoch triplet loss = 0.0157
+2025-09-09 07:23:47   Finished epoch 37 in 1:01:48, average epoch triplet loss = 0.0157
+2025-09-09 07:23:47   Extracting database features for evaluation/testing
+2025-09-09 07:26:48   Extracting queries features for evaluation/testing, time for each:0.009501638842541212
+2025-09-09 07:26:56   Calculating recalls
+2025-09-09 07:26:56   Retrieval time for each:0.00021511284080711571,0.15918350219726562/740
+2025-09-09 07:35:05   (740, 100), torch.Size([2, 100]), time:,1.2115793228149414, time each:, 0.6106783928097905
+2025-09-09 07:35:33   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.515
+rerank: R@1: 73.6, R@5: 87.6, R@10: 89.9, R@20: 91.8, R@100: 93.9
+2025-09-09 07:35:37   Not improved: 1 / 75: best R@1 = 77.4, current R@1 = 73.6
+2025-09-09 07:35:37   Start training epoch: 38
+2025-09-09 07:35:37   Cache: 0 / 2
+2025-09-09 07:46:16   global loss:0.016651686280965805
+2025-09-09 07:46:17   rerank loss:0.02818938158452511
+2025-09-09 07:46:18   global loss:0.004069387912750244
+2025-09-09 07:46:18   rerank loss:0.02710060030221939
+2025-09-09 08:06:23   Epoch[38](0/2): current batch triplet loss = 0.0083, average epoch triplet loss = 0.0169
+2025-09-09 08:06:23   Cache: 1 / 2
+2025-09-09 08:37:21   Epoch[38](1/2): current batch triplet loss = 0.0265, average epoch triplet loss = 0.0163
+2025-09-09 08:37:21   Finished epoch 38 in 1:01:44, average epoch triplet loss = 0.0163
+2025-09-09 08:37:21   Extracting database features for evaluation/testing
+2025-09-09 08:40:23   Extracting queries features for evaluation/testing, time for each:0.009566782477373135
+2025-09-09 08:40:32   Calculating recalls
+2025-09-09 08:40:32   Retrieval time for each:0.00023695327140189505,0.17534542083740234/740
+2025-09-09 08:48:41   (740, 100), torch.Size([2, 100]), time:,1.2127633094787598, time each:, 0.6109809247223107
+2025-09-09 08:49:09   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.529
+rerank: R@1: 76.5, R@5: 87.2, R@10: 90.0, R@20: 91.9, R@100: 94.5
+2025-09-09 08:49:12   Not improved: 2 / 75: best R@1 = 77.4, current R@1 = 76.5
+2025-09-09 08:49:12   Start training epoch: 39
+2025-09-09 08:49:12   Cache: 0 / 2
+2025-09-09 09:00:12   global loss:0.00916268303990364
+2025-09-09 09:00:12   rerank loss:0.047978613525629044
+2025-09-09 09:00:14   global loss:0.008776102215051651
+2025-09-09 09:00:14   rerank loss:0.025890544056892395
+2025-09-09 09:20:23   Epoch[39](0/2): current batch triplet loss = 0.0017, average epoch triplet loss = 0.0158
+2025-09-09 09:20:23   Cache: 1 / 2
+2025-09-09 09:51:11   Epoch[39](1/2): current batch triplet loss = 0.0049, average epoch triplet loss = 0.0159
+2025-09-09 09:51:11   Finished epoch 39 in 1:01:59, average epoch triplet loss = 0.0159
+2025-09-09 09:51:11   Extracting database features for evaluation/testing
+2025-09-09 09:54:13   Extracting queries features for evaluation/testing, time for each:0.009536926497855163
+2025-09-09 09:54:22   Calculating recalls
+2025-09-09 09:54:22   Retrieval time for each:0.00022201215898668444,0.16428899765014648/740
+2025-09-09 10:02:30   (740, 100), torch.Size([2, 100]), time:,1.2123949527740479, time each:, 0.6102449326901822
+2025-09-09 10:02:58   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.526
+rerank: R@1: 74.5, R@5: 86.9, R@10: 88.8, R@20: 90.9, R@100: 94.6
+2025-09-09 10:03:02   Not improved: 3 / 75: best R@1 = 77.4, current R@1 = 74.5
+2025-09-09 10:03:02   Start training epoch: 40
+2025-09-09 10:03:02   Cache: 0 / 2
+2025-09-09 10:13:51   global loss:0.004591170698404312
+2025-09-09 10:13:51   rerank loss:0.016041742637753487
+2025-09-09 10:13:53   global loss:0.0017180517315864563
+2025-09-09 10:13:53   rerank loss:0.003453516401350498
+2025-09-09 10:33:57   Epoch[40](0/2): current batch triplet loss = 0.0215, average epoch triplet loss = 0.0157
+2025-09-09 10:33:57   Cache: 1 / 2
+2025-09-09 11:04:49   Epoch[40](1/2): current batch triplet loss = 0.0208, average epoch triplet loss = 0.0151
+2025-09-09 11:04:49   Finished epoch 40 in 1:01:47, average epoch triplet loss = 0.0151
+2025-09-09 11:04:49   Extracting database features for evaluation/testing
+2025-09-09 11:07:51   Extracting queries features for evaluation/testing, time for each:0.009537860639813808
+2025-09-09 11:08:00   Calculating recalls
+2025-09-09 11:08:00   Retrieval time for each:0.00016825005814835833,0.12450504302978516/740
+2025-09-09 11:16:02   (740, 100), torch.Size([2, 100]), time:,1.2125895023345947, time each:, 0.6109500134313429
+2025-09-09 11:16:28   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.513
+rerank: R@1: 70.8, R@5: 86.8, R@10: 90.4, R@20: 92.3, R@100: 94.6
+2025-09-09 11:16:31   Not improved: 4 / 75: best R@1 = 77.4, current R@1 = 70.8
+2025-09-09 11:16:31   Start training epoch: 41
+2025-09-09 11:16:31   Cache: 0 / 2
+2025-09-09 11:27:19   global loss:0.01150437816977501
+2025-09-09 11:27:20   rerank loss:0.026308109983801842
+2025-09-09 11:27:21   global loss:0.01027759164571762
+2025-09-09 11:27:22   rerank loss:0.033971890807151794
+2025-09-09 11:47:26   Epoch[41](0/2): current batch triplet loss = 0.0073, average epoch triplet loss = 0.0153
+2025-09-09 11:47:26   Cache: 1 / 2
+2025-09-09 12:18:16   Epoch[41](1/2): current batch triplet loss = 0.0086, average epoch triplet loss = 0.0146
+2025-09-09 12:18:16   Finished epoch 41 in 1:01:44, average epoch triplet loss = 0.0146
+2025-09-09 12:18:16   Extracting database features for evaluation/testing
+2025-09-09 12:21:18   Extracting queries features for evaluation/testing, time for each:0.009543881242727918
+2025-09-09 12:21:26   Calculating recalls
+2025-09-09 12:21:26   Retrieval time for each:0.0001365133233972498,0.10101985931396484/740
+2025-09-09 12:29:31   (740, 100), torch.Size([2, 100]), time:,1.212944746017456, time each:, 0.6099338212528744
+2025-09-09 12:30:00   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.528
+rerank: R@1: 75.1, R@5: 85.7, R@10: 88.4, R@20: 90.4, R@100: 93.5
+2025-09-09 12:30:03   Not improved: 5 / 75: best R@1 = 77.4, current R@1 = 75.1
+2025-09-09 12:30:03   Start training epoch: 42
+2025-09-09 12:30:03   Cache: 0 / 2
+2025-09-09 12:40:52   global loss:0.015181340277194977
+2025-09-09 12:40:53   rerank loss:0.03273661807179451
+2025-09-09 12:40:54   global loss:0.029650866985321045
+2025-09-09 12:40:54   rerank loss:0.0155723225325346
+2025-09-09 13:00:58   Epoch[42](0/2): current batch triplet loss = 0.0014, average epoch triplet loss = 0.0136
+2025-09-09 13:00:58   Cache: 1 / 2
+2025-09-09 13:31:48   Epoch[42](1/2): current batch triplet loss = 0.0058, average epoch triplet loss = 0.0141
+2025-09-09 13:31:48   Finished epoch 42 in 1:01:45, average epoch triplet loss = 0.0141
+2025-09-09 13:31:48   Extracting database features for evaluation/testing
+2025-09-09 13:34:51   Extracting queries features for evaluation/testing, time for each:0.009588772703143183
+2025-09-09 13:34:59   Calculating recalls
+2025-09-09 13:34:59   Retrieval time for each:0.0001714129705686827,0.1268455982208252/740
+2025-09-09 13:43:05   (740, 100), torch.Size([2, 100]), time:,1.2094414234161377, time each:, 0.6097713866749326
+2025-09-09 13:43:33   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.546
+rerank: R@1: 76.4, R@5: 87.7, R@10: 90.1, R@20: 92.6, R@100: 95.0
+2025-09-09 13:43:39   Not improved: 6 / 75: best R@1 = 77.4, current R@1 = 76.4
+2025-09-09 13:43:39   Start training epoch: 43
+2025-09-09 13:43:39   Cache: 0 / 2
+2025-09-09 13:54:14   global loss:0.01773792877793312
+2025-09-09 13:54:14   rerank loss:0.02407716028392315
+2025-09-09 13:54:16   global loss:0.0064424872398376465
+2025-09-09 13:54:16   rerank loss:0.029769714921712875
+2025-09-09 14:14:30   Epoch[43](0/2): current batch triplet loss = 0.0040, average epoch triplet loss = 0.0144
+2025-09-09 14:14:30   Cache: 1 / 2
+2025-09-09 14:45:24   Epoch[43](1/2): current batch triplet loss = 0.0189, average epoch triplet loss = 0.0143
+2025-09-09 14:45:24   Finished epoch 43 in 1:01:44, average epoch triplet loss = 0.0143
+2025-09-09 14:45:24   Extracting database features for evaluation/testing
+2025-09-09 14:48:31   Extracting queries features for evaluation/testing, time for each:0.009626835987353248
+2025-09-09 14:48:39   Calculating recalls
+2025-09-09 14:48:39   Retrieval time for each:0.00013932215200888144,0.10309839248657227/740
+2025-09-09 14:56:47   (740, 100), torch.Size([2, 100]), time:,1.2144124507904053, time each:, 0.6133797809884355
+2025-09-09 14:57:12   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.547
+rerank: R@1: 78.9, R@5: 87.4, R@10: 90.1, R@20: 92.0, R@100: 94.9
+2025-09-09 14:57:25   Improved: previous best R@1 = 77.4, current R@1 = 78.9
+2025-09-09 14:57:25   Start training epoch: 44
+2025-09-09 14:57:25   Cache: 0 / 2
+2025-09-09 15:08:16   global loss:0.0320410281419754
+2025-09-09 15:08:16   rerank loss:0.019346844404935837
+2025-09-09 15:08:18   global loss:0.007729958742856979
+2025-09-09 15:08:18   rerank loss:0.015496857464313507
+2025-09-09 15:28:27   Epoch[44](0/2): current batch triplet loss = 0.0057, average epoch triplet loss = 0.0128
+2025-09-09 15:28:27   Cache: 1 / 2
+2025-09-09 15:59:28   Epoch[44](1/2): current batch triplet loss = 0.0168, average epoch triplet loss = 0.0133
+2025-09-09 15:59:28   Finished epoch 44 in 1:02:03, average epoch triplet loss = 0.0133
+2025-09-09 15:59:28   Extracting database features for evaluation/testing
+2025-09-09 16:02:32   Extracting queries features for evaluation/testing, time for each:0.009668558847038137
+2025-09-09 16:02:41   Calculating recalls
+2025-09-09 16:02:41   Retrieval time for each:0.00016953333004100904,0.12545466423034668/740
+2025-09-09 16:10:45   (740, 100), torch.Size([2, 100]), time:,1.213804006576538, time each:, 0.6140780838760169
+2025-09-09 16:11:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.550
+rerank: R@1: 76.4, R@5: 86.9, R@10: 90.0, R@20: 92.2, R@100: 94.7
+2025-09-09 16:11:16   Not improved: 1 / 75: best R@1 = 78.9, current R@1 = 76.4
+2025-09-09 16:11:16   Start training epoch: 45
+2025-09-09 16:11:16   Cache: 0 / 2
+2025-09-09 16:22:07   global loss:0.0
+2025-09-09 16:22:08   rerank loss:0.017963888123631477
+2025-09-09 16:22:09   global loss:0.019099485129117966
+2025-09-09 16:22:09   rerank loss:0.03661239147186279
+2025-09-09 16:42:18   Epoch[45](0/2): current batch triplet loss = 0.0056, average epoch triplet loss = 0.0134
+2025-09-09 16:42:18   Cache: 1 / 2
+2025-09-09 17:13:28   Epoch[45](1/2): current batch triplet loss = 0.0013, average epoch triplet loss = 0.0132
+2025-09-09 17:13:28   Finished epoch 45 in 1:02:11, average epoch triplet loss = 0.0132
+2025-09-09 17:13:28   Extracting database features for evaluation/testing
+2025-09-09 17:16:31   Extracting queries features for evaluation/testing, time for each:0.009628584158641028
+2025-09-09 17:16:40   Calculating recalls
+2025-09-09 17:16:40   Retrieval time for each:0.00015946304475938951,0.11800265312194824/740
+2025-09-09 17:24:49   (740, 100), torch.Size([2, 100]), time:,1.215954065322876, time each:, 0.6131983067538287
+2025-09-09 17:25:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.546
+rerank: R@1: 75.8, R@5: 87.7, R@10: 90.1, R@20: 92.0, R@100: 94.5
+2025-09-09 17:25:16   Not improved: 2 / 75: best R@1 = 78.9, current R@1 = 75.8
+2025-09-09 17:25:16   Start training epoch: 46
+2025-09-09 17:25:16   Cache: 0 / 2
+2025-09-09 17:36:22   global loss:0.0020380541682243347
+2025-09-09 17:36:22   rerank loss:0.011387700214982033
+2025-09-09 17:36:24   global loss:0.007916487753391266
+2025-09-09 17:36:24   rerank loss:0.018425993621349335
+2025-09-09 17:56:31   Epoch[46](0/2): current batch triplet loss = 0.0053, average epoch triplet loss = 0.0126
+2025-09-09 17:56:31   Cache: 1 / 2
+2025-09-09 18:27:34   Epoch[46](1/2): current batch triplet loss = 0.0012, average epoch triplet loss = 0.0129
+2025-09-09 18:27:34   Finished epoch 46 in 1:02:17, average epoch triplet loss = 0.0129
+2025-09-09 18:27:34   Extracting database features for evaluation/testing
+2025-09-09 18:30:36   Extracting queries features for evaluation/testing, time for each:0.00959206458766853
+2025-09-09 18:30:45   Calculating recalls
+2025-09-09 18:30:45   Retrieval time for each:0.0003393691939276618,0.2511332035064697/740
+2025-09-09 18:38:55   (740, 100), torch.Size([2, 100]), time:,1.2153527736663818, time each:, 0.6142513001287305
+2025-09-09 18:39:23   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.545
+rerank: R@1: 76.9, R@5: 87.4, R@10: 90.0, R@20: 91.6, R@100: 93.8
+2025-09-09 18:39:26   Not improved: 3 / 75: best R@1 = 78.9, current R@1 = 76.9
+2025-09-09 18:39:26   Start training epoch: 47
+2025-09-09 18:39:26   Cache: 0 / 2
+2025-09-09 18:50:14   global loss:0.006782818585634232
+2025-09-09 18:50:15   rerank loss:0.02786339819431305
+2025-09-09 18:50:16   global loss:0.010035999119281769
+2025-09-09 18:50:17   rerank loss:0.02909068390727043
+2025-09-09 19:10:24   Epoch[47](0/2): current batch triplet loss = 0.0010, average epoch triplet loss = 0.0126
+2025-09-09 19:10:24   Cache: 1 / 2
+2025-09-09 19:41:11   Epoch[47](1/2): current batch triplet loss = 0.0017, average epoch triplet loss = 0.0129
+2025-09-09 19:41:11   Finished epoch 47 in 1:01:44, average epoch triplet loss = 0.0129
+2025-09-09 19:41:11   Extracting database features for evaluation/testing
+2025-09-09 19:44:15   Extracting queries features for evaluation/testing, time for each:0.009702698439383354
+2025-09-09 19:44:24   Calculating recalls
+2025-09-09 19:44:24   Retrieval time for each:0.0001590545113022263,0.11770033836364746/740
+2025-09-09 19:52:32   (740, 100), torch.Size([2, 100]), time:,1.2166869640350342, time each:, 0.613500493925971
+2025-09-09 19:52:56   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.575
+rerank: R@1: 79.2, R@5: 89.9, R@10: 91.9, R@20: 93.4, R@100: 95.3
+2025-09-09 19:53:01   Improved: previous best R@1 = 78.9, current R@1 = 79.2
+2025-09-09 19:53:01   Start training epoch: 48
+2025-09-09 19:53:01   Cache: 0 / 2
+2025-09-09 20:03:41   global loss:0.00860803946852684
+2025-09-09 20:03:41   rerank loss:0.022182472050189972
+2025-09-09 20:03:43   global loss:0.0172090046107769
+2025-09-09 20:03:43   rerank loss:0.03385407105088234
+2025-09-09 20:23:50   Epoch[48](0/2): current batch triplet loss = 0.0041, average epoch triplet loss = 0.0132
+2025-09-09 20:23:50   Cache: 1 / 2
+2025-09-09 20:54:43   Epoch[48](1/2): current batch triplet loss = 0.0124, average epoch triplet loss = 0.0125
+2025-09-09 20:54:43   Finished epoch 48 in 1:01:41, average epoch triplet loss = 0.0125
+2025-09-09 20:54:43   Extracting database features for evaluation/testing
+2025-09-09 20:57:46   Extracting queries features for evaluation/testing, time for each:0.009639336494173712
+2025-09-09 20:57:56   Calculating recalls
+2025-09-09 20:57:56   Retrieval time for each:0.00016605886253150733,0.12288355827331543/740
+2025-09-09 21:06:00   (740, 100), torch.Size([2, 100]), time:,1.2159364223480225, time each:, 0.6137317032427401
+2025-09-09 21:06:28   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.572
+rerank: R@1: 79.2, R@5: 89.2, R@10: 92.0, R@20: 93.8, R@100: 95.7
+2025-09-09 21:06:31   Not improved: 1 / 75: best R@1 = 79.2, current R@1 = 79.2
+2025-09-09 21:06:31   Start training epoch: 49
+2025-09-09 21:06:31   Cache: 0 / 2
+2025-09-09 21:17:14   global loss:0.02922273427248001
+2025-09-09 21:17:15   rerank loss:0.016002744436264038
+2025-09-09 21:17:16   global loss:0.0
+2025-09-09 21:17:17   rerank loss:0.018848970532417297
+2025-09-09 21:37:24   Epoch[49](0/2): current batch triplet loss = 0.0144, average epoch triplet loss = 0.0122
+2025-09-09 21:37:24   Cache: 1 / 2
+2025-09-09 22:08:21   Epoch[49](1/2): current batch triplet loss = 0.0080, average epoch triplet loss = 0.0120
+2025-09-09 22:08:21   Finished epoch 49 in 1:01:49, average epoch triplet loss = 0.0120
+2025-09-09 22:08:21   Extracting database features for evaluation/testing
+2025-09-09 22:11:26   Extracting queries features for evaluation/testing, time for each:0.00969405649551166
+2025-09-09 22:11:35   Calculating recalls
+2025-09-09 22:11:35   Retrieval time for each:0.00015998788782068201,0.11839103698730469/740
+2025-09-09 22:19:40   (740, 100), torch.Size([2, 100]), time:,1.2170178890228271, time each:, 0.6152980066634514
+2025-09-09 22:20:08   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.564
+rerank: R@1: 76.9, R@5: 88.6, R@10: 90.9, R@20: 92.4, R@100: 94.7
+2025-09-09 22:20:11   Not improved: 2 / 75: best R@1 = 79.2, current R@1 = 76.9
+2025-09-09 22:20:11   Start training epoch: 50
+2025-09-09 22:20:11   Cache: 0 / 2
+2025-09-09 22:30:57   global loss:0.008890092372894287
+2025-09-09 22:30:57   rerank loss:0.022025885060429573
+2025-09-09 22:30:59   global loss:0.02289135754108429
+2025-09-09 22:30:59   rerank loss:0.0409182533621788
+2025-09-09 22:51:06   Epoch[50](0/2): current batch triplet loss = 0.0280, average epoch triplet loss = 0.0128
+2025-09-09 22:51:06   Cache: 1 / 2
+2025-09-09 23:22:04   Epoch[50](1/2): current batch triplet loss = 0.0110, average epoch triplet loss = 0.0124
+2025-09-09 23:22:04   Finished epoch 50 in 1:01:52, average epoch triplet loss = 0.0124
+2025-09-09 23:22:04   Extracting database features for evaluation/testing
+2025-09-09 23:25:08   Extracting queries features for evaluation/testing, time for each:0.009668668549148376
+2025-09-09 23:25:17   Calculating recalls
+2025-09-09 23:25:17   Retrieval time for each:0.00014250278472900392,0.10545206069946289/740
+2025-09-09 23:33:22   (740, 100), torch.Size([2, 100]), time:,1.215076208114624, time each:, 0.6137995330063073
+2025-09-09 23:33:50   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.581
+rerank: R@1: 78.4, R@5: 88.5, R@10: 91.5, R@20: 92.8, R@100: 95.4
+2025-09-09 23:33:56   Not improved: 3 / 75: best R@1 = 79.2, current R@1 = 78.4
+2025-09-09 23:33:56   Start training epoch: 51
+2025-09-09 23:33:56   Cache: 0 / 2
+2025-09-09 23:45:03   global loss:0.0045643821358680725
+2025-09-09 23:45:04   rerank loss:0.023644406348466873
+2025-09-09 23:45:05   global loss:0.0006435997784137726
+2025-09-09 23:45:06   rerank loss:0.026685401797294617
+2025-09-10 00:05:17   Epoch[51](0/2): current batch triplet loss = 0.0011, average epoch triplet loss = 0.0117
+2025-09-10 00:05:17   Cache: 1 / 2
+2025-09-10 00:36:31   Epoch[51](1/2): current batch triplet loss = 0.0091, average epoch triplet loss = 0.0118
+2025-09-10 00:36:31   Finished epoch 51 in 1:02:35, average epoch triplet loss = 0.0118
+2025-09-10 00:36:31   Extracting database features for evaluation/testing
+2025-09-10 00:39:34   Extracting queries features for evaluation/testing, time for each:0.009607965796735807
+2025-09-10 00:39:42   Calculating recalls
+2025-09-10 00:39:42   Retrieval time for each:0.00016003009435292838,0.11842226982116699/740
+2025-09-10 00:47:51   (740, 100), torch.Size([2, 100]), time:,1.2173008918762207, time each:, 0.6152288317680359
+2025-09-10 00:48:20   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.577
+rerank: R@1: 78.5, R@5: 89.6, R@10: 91.2, R@20: 92.6, R@100: 95.4
+2025-09-10 00:48:27   Not improved: 4 / 75: best R@1 = 79.2, current R@1 = 78.5
+2025-09-10 00:48:27   Start training epoch: 52
+2025-09-10 00:48:27   Cache: 0 / 2
+2025-09-10 00:59:20   global loss:0.012926720082759857
+2025-09-10 00:59:20   rerank loss:0.024146540090441704
+2025-09-10 00:59:22   global loss:0.006652206182479858
+2025-09-10 00:59:22   rerank loss:0.01596946269273758
+2025-09-10 01:19:32   Epoch[52](0/2): current batch triplet loss = 0.0161, average epoch triplet loss = 0.0118
+2025-09-10 01:19:32   Cache: 1 / 2
+2025-09-10 01:50:44   Epoch[52](1/2): current batch triplet loss = 0.0022, average epoch triplet loss = 0.0119
+2025-09-10 01:50:44   Finished epoch 52 in 1:02:17, average epoch triplet loss = 0.0119
+2025-09-10 01:50:44   Extracting database features for evaluation/testing
+2025-09-10 01:53:48   Extracting queries features for evaluation/testing, time for each:0.00960846083966861
+2025-09-10 01:53:56   Calculating recalls
+2025-09-10 01:53:57   Retrieval time for each:0.00016420660792170345,0.12151288986206055/740
+2025-09-10 02:02:05   (740, 100), torch.Size([2, 100]), time:,1.2170839309692383, time each:, 0.6138096242337614
+2025-09-10 02:02:29   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.587
+rerank: R@1: 79.7, R@5: 89.7, R@10: 92.0, R@20: 93.8, R@100: 95.8
+2025-09-10 02:02:35   Improved: previous best R@1 = 79.2, current R@1 = 79.7
+2025-09-10 02:02:35   Start training epoch: 53
+2025-09-10 02:02:35   Cache: 0 / 2
+2025-09-10 02:13:24   global loss:0.00426802784204483
+2025-09-10 02:13:24   rerank loss:0.005246286746114492
+2025-09-10 02:13:26   global loss:0.004996839910745621
+2025-09-10 02:13:26   rerank loss:0.025508686900138855
+2025-09-10 02:33:49   Epoch[53](0/2): current batch triplet loss = 0.0050, average epoch triplet loss = 0.0118
+2025-09-10 02:33:49   Cache: 1 / 2
+2025-09-10 03:05:06   Epoch[53](1/2): current batch triplet loss = 0.0028, average epoch triplet loss = 0.0110
+2025-09-10 03:05:06   Finished epoch 53 in 1:02:30, average epoch triplet loss = 0.0110
+2025-09-10 03:05:06   Extracting database features for evaluation/testing
+2025-09-10 03:08:09   Extracting queries features for evaluation/testing, time for each:0.00960594894813876
+2025-09-10 03:08:18   Calculating recalls
+2025-09-10 03:08:18   Retrieval time for each:0.0003536859074154416,0.26172757148742676/740
+2025-09-10 03:16:33   (740, 100), torch.Size([2, 100]), time:,1.2159957885742188, time each:, 0.6130802144875398
+2025-09-10 03:17:01   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.584
+rerank: R@1: 79.5, R@5: 89.2, R@10: 92.2, R@20: 93.6, R@100: 95.8
+2025-09-10 03:17:04   Not improved: 1 / 75: best R@1 = 79.7, current R@1 = 79.5
+2025-09-10 03:17:04   Start training epoch: 54
+2025-09-10 03:17:04   Cache: 0 / 2
+2025-09-10 03:28:00   global loss:0.010212291032075882
+2025-09-10 03:28:00   rerank loss:0.01723606139421463
+2025-09-10 03:28:02   global loss:0.0
+2025-09-10 03:28:02   rerank loss:0.019228801131248474
+2025-09-10 03:48:10   Epoch[54](0/2): current batch triplet loss = 0.0025, average epoch triplet loss = 0.0109
+2025-09-10 03:48:10   Cache: 1 / 2
+2025-09-10 04:19:09   Epoch[54](1/2): current batch triplet loss = 0.0022, average epoch triplet loss = 0.0110
+2025-09-10 04:19:09   Finished epoch 54 in 1:02:04, average epoch triplet loss = 0.0110
+2025-09-10 04:19:09   Extracting database features for evaluation/testing
+2025-09-10 04:22:11   Extracting queries features for evaluation/testing, time for each:0.009597643488926978
+2025-09-10 04:22:20   Calculating recalls
+2025-09-10 04:22:20   Retrieval time for each:0.0001617161003318993,0.11966991424560547/740
+2025-09-10 04:30:28   (740, 100), torch.Size([2, 100]), time:,1.2174854278564453, time each:, 0.6138744389688646
+2025-09-10 04:30:56   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.586
+rerank: R@1: 78.5, R@5: 88.6, R@10: 91.4, R@20: 93.4, R@100: 95.1
+2025-09-10 04:31:03   Not improved: 2 / 75: best R@1 = 79.7, current R@1 = 78.5
+2025-09-10 04:31:03   Start training epoch: 55
+2025-09-10 04:31:03   Cache: 0 / 2
+2025-09-10 04:41:48   global loss:0.0
+2025-09-10 04:41:48   rerank loss:0.022491829469799995
+2025-09-10 04:41:50   global loss:0.02637394890189171
+2025-09-10 04:41:50   rerank loss:0.021173810586333275
+2025-09-10 05:02:03   Epoch[55](0/2): current batch triplet loss = 0.0088, average epoch triplet loss = 0.0118
+2025-09-10 05:02:03   Cache: 1 / 2
+2025-09-10 05:32:58   Epoch[55](1/2): current batch triplet loss = 0.0053, average epoch triplet loss = 0.0112
+2025-09-10 05:32:58   Finished epoch 55 in 1:01:54, average epoch triplet loss = 0.0112
+2025-09-10 05:32:58   Extracting database features for evaluation/testing
+2025-09-10 05:36:02   Extracting queries features for evaluation/testing, time for each:0.009613763836898104
+2025-09-10 05:36:10   Calculating recalls
+2025-09-10 05:36:11   Retrieval time for each:0.00014753792736981367,0.10917806625366211/740
+2025-09-10 05:44:22   (740, 100), torch.Size([2, 100]), time:,1.216151237487793, time each:, 0.6142695310953501
+2025-09-10 05:44:50   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.590
+rerank: R@1: 80.3, R@5: 89.7, R@10: 92.0, R@20: 93.6, R@100: 95.8
+2025-09-10 05:44:55   Improved: previous best R@1 = 79.7, current R@1 = 80.3
+2025-09-10 05:44:55   Start training epoch: 56
+2025-09-10 05:44:55   Cache: 0 / 2
+2025-09-10 05:55:47   global loss:0.01542302593588829
+2025-09-10 05:55:47   rerank loss:0.014842571690678596
+2025-09-10 05:55:48   global loss:0.02943367511034012
+2025-09-10 05:55:49   rerank loss:0.027234554290771484
+2025-09-10 06:16:00   Epoch[56](0/2): current batch triplet loss = 0.0070, average epoch triplet loss = 0.0100
+2025-09-10 06:16:00   Cache: 1 / 2
+2025-09-10 06:47:06   Epoch[56](1/2): current batch triplet loss = 0.0094, average epoch triplet loss = 0.0102
+2025-09-10 06:47:06   Finished epoch 56 in 1:02:10, average epoch triplet loss = 0.0102
+2025-09-10 06:47:06   Extracting database features for evaluation/testing
+2025-09-10 06:50:10   Extracting queries features for evaluation/testing, time for each:0.009678180365183163
+2025-09-10 06:50:20   Calculating recalls
+2025-09-10 06:50:20   Retrieval time for each:0.0002509159010809821,0.18567776679992676/740
+2025-09-10 06:58:27   (740, 100), torch.Size([2, 100]), time:,1.217071294784546, time each:, 0.6138370584797215
+2025-09-10 06:58:55   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.597
+rerank: R@1: 82.0, R@5: 90.5, R@10: 92.0, R@20: 93.9, R@100: 95.8
+2025-09-10 06:59:01   Improved: previous best R@1 = 80.3, current R@1 = 82.0
+2025-09-10 06:59:01   Start training epoch: 57
+2025-09-10 06:59:01   Cache: 0 / 2
+2025-09-10 07:10:00   global loss:0.018127240240573883
+2025-09-10 07:10:00   rerank loss:0.010576856322586536
+2025-09-10 07:10:02   global loss:0.0179029181599617
+2025-09-10 07:10:02   rerank loss:0.01703445240855217
+2025-09-10 07:30:11   Epoch[57](0/2): current batch triplet loss = 0.0131, average epoch triplet loss = 0.0101
+2025-09-10 07:30:11   Cache: 1 / 2
+2025-09-10 08:01:18   Epoch[57](1/2): current batch triplet loss = 0.0021, average epoch triplet loss = 0.0102
+2025-09-10 08:01:18   Finished epoch 57 in 1:02:17, average epoch triplet loss = 0.0102
+2025-09-10 08:01:18   Extracting database features for evaluation/testing
+2025-09-10 08:04:22   Extracting queries features for evaluation/testing, time for each:0.009657835822676217
+2025-09-10 08:04:31   Calculating recalls
+2025-09-10 08:04:31   Retrieval time for each:0.0001460690756101866,0.10809111595153809/740
+2025-09-10 08:12:35   (740, 100), torch.Size([2, 100]), time:,1.219451665878296, time each:, 0.6132593702625584
+2025-09-10 08:13:02   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.599
+rerank: R@1: 81.4, R@5: 90.9, R@10: 92.7, R@20: 94.3, R@100: 95.8
+2025-09-10 08:13:07   Not improved: 1 / 75: best R@1 = 82.0, current R@1 = 81.4
+2025-09-10 08:13:07   Start training epoch: 58
+2025-09-10 08:13:07   Cache: 0 / 2
+2025-09-10 08:23:53   global loss:0.011910144239664078
+2025-09-10 08:23:54   rerank loss:0.017865579575300217
+2025-09-10 08:23:55   global loss:0.0012689903378486633
+2025-09-10 08:23:56   rerank loss:0.0060616228729486465
+2025-09-10 08:44:08   Epoch[58](0/2): current batch triplet loss = 0.0191, average epoch triplet loss = 0.0099
+2025-09-10 08:44:08   Cache: 1 / 2
+2025-09-10 09:15:16   Epoch[58](1/2): current batch triplet loss = 0.0339, average epoch triplet loss = 0.0100
+2025-09-10 09:15:16   Finished epoch 58 in 1:02:08, average epoch triplet loss = 0.0100
+2025-09-10 09:15:16   Extracting database features for evaluation/testing
+2025-09-10 09:18:22   Extracting queries features for evaluation/testing, time for each:0.009668261755581001
+2025-09-10 09:18:34   Calculating recalls
+2025-09-10 09:18:34   Retrieval time for each:0.0003391001675579999,0.2509341239929199/740
+2025-09-10 09:26:42   (740, 100), torch.Size([2, 100]), time:,1.2160365581512451, time each:, 0.6145308626664652
+2025-09-10 09:27:06   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.598
+rerank: R@1: 81.1, R@5: 90.1, R@10: 92.2, R@20: 94.1, R@100: 95.8
+2025-09-10 09:27:14   Not improved: 2 / 75: best R@1 = 82.0, current R@1 = 81.1
+2025-09-10 09:27:14   Start training epoch: 59
+2025-09-10 09:27:14   Cache: 0 / 2
+2025-09-10 09:38:00   global loss:0.022764109075069427
+2025-09-10 09:38:01   rerank loss:0.018854299560189247
+2025-09-10 09:38:02   global loss:0.008084874600172043
+2025-09-10 09:38:03   rerank loss:0.015041195787489414
+2025-09-10 09:58:34   Epoch[59](0/2): current batch triplet loss = 0.0011, average epoch triplet loss = 0.0099
+2025-09-10 09:58:34   Cache: 1 / 2
+2025-09-10 10:29:56   Epoch[59](1/2): current batch triplet loss = 0.0088, average epoch triplet loss = 0.0098
+2025-09-10 10:29:56   Finished epoch 59 in 1:02:41, average epoch triplet loss = 0.0098
+2025-09-10 10:29:56   Extracting database features for evaluation/testing
+2025-09-10 10:32:59   Extracting queries features for evaluation/testing, time for each:0.009623438418369516
+2025-09-10 10:33:08   Calculating recalls
+2025-09-10 10:33:08   Retrieval time for each:0.00014459088041975692,0.10699725151062012/740
+2025-09-10 10:41:16   (740, 100), torch.Size([2, 100]), time:,1.2171034812927246, time each:, 0.6138720244974704
+2025-09-10 10:41:44   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.600
+rerank: R@1: 81.1, R@5: 91.2, R@10: 92.3, R@20: 93.9, R@100: 95.8
+2025-09-10 10:41:50   Not improved: 3 / 75: best R@1 = 82.0, current R@1 = 81.1
+2025-09-10 10:41:50   Start training epoch: 60
+2025-09-10 10:41:50   Cache: 0 / 2
+2025-09-10 10:52:48   global loss:0.0
+2025-09-10 10:52:49   rerank loss:0.0016720534767955542
+2025-09-10 10:52:50   global loss:0.004764791578054428
+2025-09-10 10:52:51   rerank loss:0.00702841067686677
+2025-09-10 11:13:01   Epoch[60](0/2): current batch triplet loss = 0.0064, average epoch triplet loss = 0.0102
+2025-09-10 11:13:01   Cache: 1 / 2
+2025-09-10 11:43:53   Epoch[60](1/2): current batch triplet loss = 0.0149, average epoch triplet loss = 0.0100
+2025-09-10 11:43:53   Finished epoch 60 in 1:02:03, average epoch triplet loss = 0.0100
+2025-09-10 11:43:53   Extracting database features for evaluation/testing
+2025-09-10 11:46:57   Extracting queries features for evaluation/testing, time for each:0.009673431563861268
+2025-09-10 11:47:06   Calculating recalls
+2025-09-10 11:47:07   Retrieval time for each:0.0003791039054458206,0.2805368900299072/740
+2025-09-10 11:55:16   (740, 100), torch.Size([2, 100]), time:,1.2175517082214355, time each:, 0.6141723023878561
+2025-09-10 11:55:44   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.601
+rerank: R@1: 82.0, R@5: 90.3, R@10: 93.0, R@20: 94.3, R@100: 95.9
+2025-09-10 11:55:52   Not improved: 4 / 75: best R@1 = 82.0, current R@1 = 82.0
+2025-09-10 11:55:52   Start training epoch: 61
+2025-09-10 11:55:52   Cache: 0 / 2
+2025-09-10 12:06:53   global loss:0.016398049890995026
+2025-09-10 12:06:53   rerank loss:0.009448316879570484
+2025-09-10 12:06:55   global loss:0.0059090107679367065
+2025-09-10 12:06:55   rerank loss:0.0037763253785669804
+2025-09-10 12:27:05   Epoch[61](0/2): current batch triplet loss = 0.0619, average epoch triplet loss = 0.0101
+2025-09-10 12:27:05   Cache: 1 / 2
+2025-09-10 12:58:22   Epoch[61](1/2): current batch triplet loss = 0.0132, average epoch triplet loss = 0.0102
+2025-09-10 12:58:22   Finished epoch 61 in 1:02:30, average epoch triplet loss = 0.0102
+2025-09-10 12:58:22   Extracting database features for evaluation/testing
+2025-09-10 13:01:27   Extracting queries features for evaluation/testing, time for each:0.00969462448788412
+2025-09-10 13:01:36   Calculating recalls
+2025-09-10 13:01:36   Retrieval time for each:0.00016548408044351115,0.12245821952819824/740
+2025-09-10 13:09:45   (740, 100), torch.Size([2, 100]), time:,1.217743158340454, time each:, 0.6142516068510107
+2025-09-10 13:10:09   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.600
+rerank: R@1: 80.5, R@5: 90.4, R@10: 92.2, R@20: 94.1, R@100: 95.8
+2025-09-10 13:10:12   Not improved: 5 / 75: best R@1 = 82.0, current R@1 = 80.5
+2025-09-10 13:10:12   Start training epoch: 62
+2025-09-10 13:10:12   Cache: 0 / 2
+2025-09-10 13:21:01   global loss:0.000400494784116745
+2025-09-10 13:21:01   rerank loss:0.004070586990565062
+2025-09-10 13:21:03   global loss:0.025962837040424347
+2025-09-10 13:21:03   rerank loss:0.021592091768980026
+2025-09-10 13:41:14   Epoch[62](0/2): current batch triplet loss = 0.0094, average epoch triplet loss = 0.0106
+2025-09-10 13:41:14   Cache: 1 / 2
+2025-09-10 14:12:16   Epoch[62](1/2): current batch triplet loss = 0.0025, average epoch triplet loss = 0.0104
+2025-09-10 14:12:16   Finished epoch 62 in 1:02:04, average epoch triplet loss = 0.0104
+2025-09-10 14:12:16   Extracting database features for evaluation/testing
+2025-09-10 14:15:19   Extracting queries features for evaluation/testing, time for each:0.009597604664259839
+2025-09-10 14:15:27   Calculating recalls
+2025-09-10 14:15:27   Retrieval time for each:0.0001950795586044724,0.14435887336730957/740
+2025-09-10 14:23:41   (740, 100), torch.Size([2, 100]), time:,1.2259876728057861, time each:, 0.614233934879303
+2025-09-10 14:24:10   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.603
+rerank: R@1: 80.8, R@5: 90.9, R@10: 93.0, R@20: 94.5, R@100: 96.2
+2025-09-10 14:24:17   Not improved: 6 / 75: best R@1 = 82.0, current R@1 = 80.8
+2025-09-10 14:24:17   Start training epoch: 63
+2025-09-10 14:24:17   Cache: 0 / 2
+2025-09-10 14:35:14   global loss:0.011474508792161942
+2025-09-10 14:35:14   rerank loss:0.013389719650149345
+2025-09-10 14:35:16   global loss:0.00786825641989708
+2025-09-10 14:35:16   rerank loss:0.004923988599330187
+2025-09-10 14:55:23   Epoch[63](0/2): current batch triplet loss = 0.0107, average epoch triplet loss = 0.0098
+2025-09-10 14:55:23   Cache: 1 / 2
+2025-09-10 15:26:24   Epoch[63](1/2): current batch triplet loss = 0.0007, average epoch triplet loss = 0.0099
+2025-09-10 15:26:24   Finished epoch 63 in 1:02:06, average epoch triplet loss = 0.0099
+2025-09-10 15:26:24   Extracting database features for evaluation/testing
+2025-09-10 15:29:28   Extracting queries features for evaluation/testing, time for each:0.009613529511775609
+2025-09-10 15:29:37   Calculating recalls
+2025-09-10 15:29:37   Retrieval time for each:0.00014149820482408677,0.10470867156982422/740
+2025-09-10 15:37:49   (740, 100), torch.Size([2, 100]), time:,1.2237873077392578, time each:, 0.6140694099503594
+2025-09-10 15:38:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.607
+rerank: R@1: 81.8, R@5: 91.6, R@10: 92.8, R@20: 94.3, R@100: 96.1
+2025-09-10 15:38:16   Not improved: 7 / 75: best R@1 = 82.0, current R@1 = 81.8
+2025-09-10 15:38:16   Start training epoch: 64
+2025-09-10 15:38:16   Cache: 0 / 2
+2025-09-10 15:49:09   global loss:0.0
+2025-09-10 15:49:09   rerank loss:0.007290979381650686
+2025-09-10 15:49:11   global loss:0.0005271695554256439
+2025-09-10 15:49:11   rerank loss:0.00975901447236538
+2025-09-10 16:09:19   Epoch[64](0/2): current batch triplet loss = 0.0237, average epoch triplet loss = 0.0101
+2025-09-10 16:09:19   Cache: 1 / 2
+2025-09-10 16:40:28   Epoch[64](1/2): current batch triplet loss = 0.0022, average epoch triplet loss = 0.0101
+2025-09-10 16:40:28   Finished epoch 64 in 1:02:11, average epoch triplet loss = 0.0101
+2025-09-10 16:40:28   Extracting database features for evaluation/testing
+2025-09-10 16:43:33   Extracting queries features for evaluation/testing, time for each:0.009634110855693614
+2025-09-10 16:43:41   Calculating recalls
+2025-09-10 16:43:41   Retrieval time for each:0.00013940012132799304,0.10315608978271484/740
+2025-09-10 16:51:54   (740, 100), torch.Size([2, 100]), time:,1.2188305854797363, time each:, 0.6121755947937837
+2025-09-10 16:52:18   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.611
+rerank: R@1: 81.2, R@5: 91.8, R@10: 92.7, R@20: 94.7, R@100: 96.2
+2025-09-10 16:52:21   Not improved: 8 / 75: best R@1 = 82.0, current R@1 = 81.2
+2025-09-10 16:52:21   Start training epoch: 65
+2025-09-10 16:52:21   Cache: 0 / 2
+2025-09-10 17:03:14   global loss:0.0007774457335472107
+2025-09-10 17:03:14   rerank loss:0.00997612439095974
+2025-09-10 17:03:16   global loss:0.0071862004697322845
+2025-09-10 17:03:16   rerank loss:0.0016951492289081216
+2025-09-10 17:23:26   Epoch[65](0/2): current batch triplet loss = 0.0164, average epoch triplet loss = 0.0100
+2025-09-10 17:23:26   Cache: 1 / 2
+2025-09-10 17:54:30   Epoch[65](1/2): current batch triplet loss = 0.0095, average epoch triplet loss = 0.0100
+2025-09-10 17:54:30   Finished epoch 65 in 1:02:09, average epoch triplet loss = 0.0100
+2025-09-10 17:54:30   Extracting database features for evaluation/testing
+2025-09-10 17:57:34   Extracting queries features for evaluation/testing, time for each:0.009643434739114118
+2025-09-10 17:57:42   Calculating recalls
+2025-09-10 17:57:43   Retrieval time for each:0.00013659515896359006,0.10108041763305664/740
+2025-09-10 18:05:51   (740, 100), torch.Size([2, 100]), time:,1.215362548828125, time each:, 0.6131818046440949
+2025-09-10 18:06:17   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.612
+rerank: R@1: 82.3, R@5: 91.9, R@10: 93.5, R@20: 95.0, R@100: 96.5
+2025-09-10 18:06:23   Improved: previous best R@1 = 82.0, current R@1 = 82.3
+2025-09-10 18:06:23   Start training epoch: 66
+2025-09-10 18:06:23   Cache: 0 / 2
+2025-09-10 18:17:16   global loss:0.008422404527664185
+2025-09-10 18:17:17   rerank loss:0.024063443765044212
+2025-09-10 18:17:18   global loss:0.0
+2025-09-10 18:17:19   rerank loss:0.0018300773808732629
+2025-09-10 18:37:25   Epoch[66](0/2): current batch triplet loss = 0.0170, average epoch triplet loss = 0.0102
+2025-09-10 18:37:25   Cache: 1 / 2
+2025-09-10 19:08:21   Epoch[66](1/2): current batch triplet loss = 0.0115, average epoch triplet loss = 0.0101
+2025-09-10 19:08:21   Finished epoch 66 in 1:01:57, average epoch triplet loss = 0.0101
+2025-09-10 19:08:21   Extracting database features for evaluation/testing
+2025-09-10 19:11:25   Extracting queries features for evaluation/testing, time for each:0.009648011312039515
+2025-09-10 19:11:33   Calculating recalls
+2025-09-10 19:11:33   Retrieval time for each:0.00017506786294885584,0.12955021858215332/740
+2025-09-10 19:19:45   (740, 100), torch.Size([2, 100]), time:,1.2155570983886719, time each:, 0.6135934356096628
+2025-09-10 19:20:13   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.615
+rerank: R@1: 82.4, R@5: 91.9, R@10: 94.1, R@20: 95.0, R@100: 96.4
+2025-09-10 19:20:22   Improved: previous best R@1 = 82.3, current R@1 = 82.4
+2025-09-10 19:20:22   Start training epoch: 67
+2025-09-10 19:20:22   Cache: 0 / 2
+2025-09-10 19:31:16   global loss:0.02877342328429222
+2025-09-10 19:31:17   rerank loss:0.02177433855831623
+2025-09-10 19:31:18   global loss:0.003228355199098587
+2025-09-10 19:31:18   rerank loss:0.009413800202310085
+2025-09-10 19:51:30   Epoch[67](0/2): current batch triplet loss = 0.0046, average epoch triplet loss = 0.0092
+2025-09-10 19:51:30   Cache: 1 / 2
+2025-09-10 20:22:26   Epoch[67](1/2): current batch triplet loss = 0.0058, average epoch triplet loss = 0.0099
+2025-09-10 20:22:26   Finished epoch 67 in 1:02:03, average epoch triplet loss = 0.0099
+2025-09-10 20:22:26   Extracting database features for evaluation/testing
+2025-09-10 20:25:31   Extracting queries features for evaluation/testing, time for each:0.009719678122657047
+2025-09-10 20:25:39   Calculating recalls
+2025-09-10 20:25:39   Retrieval time for each:0.00014126977405032597,0.10453963279724121/740
+2025-09-10 20:33:47   (740, 100), torch.Size([2, 100]), time:,1.2148549556732178, time each:, 0.6134290228018889
+2025-09-10 20:34:15   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.616
+rerank: R@1: 82.3, R@5: 92.4, R@10: 94.2, R@20: 95.0, R@100: 96.5
+2025-09-10 20:34:18   Not improved: 1 / 75: best R@1 = 82.4, current R@1 = 82.3
+2025-09-10 20:34:18   Start training epoch: 68
+2025-09-10 20:34:18   Cache: 0 / 2
+2025-09-10 20:45:00   global loss:0.0030089393258094788
+2025-09-10 20:45:01   rerank loss:0.020243538543581963
+2025-09-10 20:45:02   global loss:0.0
+2025-09-10 20:45:03   rerank loss:0.004548136610537767
+2025-09-10 21:05:10   Epoch[68](0/2): current batch triplet loss = 0.0022, average epoch triplet loss = 0.0096
+2025-09-10 21:05:10   Cache: 1 / 2
+2025-09-10 21:36:09   Epoch[68](1/2): current batch triplet loss = 0.0096, average epoch triplet loss = 0.0100
+2025-09-10 21:36:09   Finished epoch 68 in 1:01:50, average epoch triplet loss = 0.0100
+2025-09-10 21:36:09   Extracting database features for evaluation/testing
+2025-09-10 21:39:11   Extracting queries features for evaluation/testing, time for each:0.00956275316422053
+2025-09-10 21:39:20   Calculating recalls
+2025-09-10 21:39:20   Retrieval time for each:0.00014069209227690824,0.10411214828491211/740
+2025-09-10 21:47:28   (740, 100), torch.Size([2, 100]), time:,1.2169175148010254, time each:, 0.6139380158604802
+2025-09-10 21:47:52   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.618
+rerank: R@1: 82.6, R@5: 92.2, R@10: 93.9, R@20: 95.1, R@100: 96.6
+2025-09-10 21:47:58   Improved: previous best R@1 = 82.4, current R@1 = 82.6
+2025-09-10 21:47:58   Start training epoch: 69
+2025-09-10 21:47:58   Cache: 0 / 2
+2025-09-10 21:59:02   global loss:0.006030309945344925
+2025-09-10 21:59:02   rerank loss:0.010640782304108143
+2025-09-10 21:59:04   global loss:0.0025040581822395325
+2025-09-10 21:59:04   rerank loss:0.011126353405416012
+2025-09-10 22:19:11   Epoch[69](0/2): current batch triplet loss = 0.0088, average epoch triplet loss = 0.0096
+2025-09-10 22:19:11   Cache: 1 / 2
+2025-09-10 22:50:05   Epoch[69](1/2): current batch triplet loss = 0.0090, average epoch triplet loss = 0.0098
+2025-09-10 22:50:05   Finished epoch 69 in 1:02:07, average epoch triplet loss = 0.0098
+2025-09-10 22:50:05   Extracting database features for evaluation/testing
+2025-09-10 22:53:09   Extracting queries features for evaluation/testing, time for each:0.009658393316090527
+2025-09-10 22:53:17   Calculating recalls
+2025-09-10 22:53:18   Retrieval time for each:0.0001924517992380503,0.14241433143615723/740
+2025-09-10 23:01:26   (740, 100), torch.Size([2, 100]), time:,1.2146124839782715, time each:, 0.6140318232613641
+2025-09-10 23:01:50   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.8, R@5: 92.2, R@10: 94.3, R@20: 95.0, R@100: 96.6
+2025-09-10 23:01:56   Improved: previous best R@1 = 82.6, current R@1 = 82.8
+2025-09-10 23:01:56   Start training epoch: 70
+2025-09-10 23:01:56   Cache: 0 / 2
+2025-09-10 23:12:37   global loss:0.013642650097608566
+2025-09-10 23:12:38   rerank loss:0.016118615865707397
+2025-09-10 23:12:39   global loss:0.0
+2025-09-10 23:12:40   rerank loss:0.005165375303477049
+2025-09-10 23:32:46   Epoch[70](0/2): current batch triplet loss = 0.0222, average epoch triplet loss = 0.0114
+2025-09-10 23:32:46   Cache: 1 / 2
+2025-09-11 00:03:44   Epoch[70](1/2): current batch triplet loss = 0.0004, average epoch triplet loss = 0.0107
+2025-09-11 00:03:44   Finished epoch 70 in 1:01:48, average epoch triplet loss = 0.0107
+2025-09-11 00:03:44   Extracting database features for evaluation/testing
+2025-09-11 00:06:47   Extracting queries features for evaluation/testing, time for each:0.009607755425914938
+2025-09-11 00:06:56   Calculating recalls
+2025-09-11 00:06:56   Retrieval time for each:0.00013874736992088523,0.10267305374145508/740
+2025-09-11 00:15:09   (740, 100), torch.Size([2, 100]), time:,1.2739508152008057, time each:, 0.6147334691640493
+2025-09-11 00:15:34   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.621
+rerank: R@1: 83.1, R@5: 92.4, R@10: 94.2, R@20: 95.1, R@100: 96.6
+2025-09-11 00:15:40   Improved: previous best R@1 = 82.8, current R@1 = 83.1
+2025-09-11 00:15:40   Start training epoch: 71
+2025-09-11 00:15:40   Cache: 0 / 2
+2025-09-11 00:26:25   global loss:0.00751548632979393
+2025-09-11 00:26:26   rerank loss:0.01179308071732521
+2025-09-11 00:26:27   global loss:0.0
+2025-09-11 00:26:28   rerank loss:0.0008585674222558737
+2025-09-11 00:46:35   Epoch[71](0/2): current batch triplet loss = 0.0015, average epoch triplet loss = 0.0104
+2025-09-11 00:46:35   Cache: 1 / 2
+2025-09-11 01:17:39   Epoch[71](1/2): current batch triplet loss = 0.0304, average epoch triplet loss = 0.0102
+2025-09-11 01:17:39   Finished epoch 71 in 1:01:59, average epoch triplet loss = 0.0102
+2025-09-11 01:17:39   Extracting database features for evaluation/testing
+2025-09-11 01:20:43   Extracting queries features for evaluation/testing, time for each:0.00964697344391191
+2025-09-11 01:20:51   Calculating recalls
+2025-09-11 01:20:51   Retrieval time for each:0.00013687771719855232,0.10128951072692871/740
+2025-09-11 01:29:00   (740, 100), torch.Size([2, 100]), time:,1.2275190353393555, time each:, 0.6144614338874816
+2025-09-11 01:29:24   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.7, R@5: 92.2, R@10: 94.1, R@20: 95.0, R@100: 96.6
+2025-09-11 01:29:27   Not improved: 1 / 75: best R@1 = 83.1, current R@1 = 82.7
+2025-09-11 01:29:27   Start training epoch: 72
+2025-09-11 01:29:27   Cache: 0 / 2
+2025-09-11 01:40:19   global loss:0.012626606971025467
+2025-09-11 01:40:20   rerank loss:0.015492977574467659
+2025-09-11 01:40:21   global loss:0.0
+2025-09-11 01:40:21   rerank loss:0.0014122846769168973
+2025-09-11 02:00:29   Epoch[72](0/2): current batch triplet loss = 0.0007, average epoch triplet loss = 0.0116
+2025-09-11 02:00:29   Cache: 1 / 2
+2025-09-11 02:31:21   Epoch[72](1/2): current batch triplet loss = 0.0050, average epoch triplet loss = 0.0113
+2025-09-11 02:31:21   Finished epoch 72 in 1:01:53, average epoch triplet loss = 0.0113
+2025-09-11 02:31:21   Extracting database features for evaluation/testing
+2025-09-11 02:34:26   Extracting queries features for evaluation/testing, time for each:0.009596207582680854
+2025-09-11 02:34:34   Calculating recalls
+2025-09-11 02:34:34   Retrieval time for each:0.00014050039085181985,0.10397028923034668/740
+2025-09-11 02:42:47   (740, 100), torch.Size([2, 100]), time:,1.2106337547302246, time each:, 0.6146247999088185
+2025-09-11 02:43:15   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 83.0, R@5: 92.6, R@10: 94.1, R@20: 95.1, R@100: 96.6
+2025-09-11 02:43:23   Not improved: 2 / 75: best R@1 = 83.1, current R@1 = 83.0
+2025-09-11 02:43:23   Start training epoch: 73
+2025-09-11 02:43:23   Cache: 0 / 2
+2025-09-11 02:54:23   global loss:0.0003276653587818146
+2025-09-11 02:54:24   rerank loss:0.003866142127662897
+2025-09-11 02:54:25   global loss:0.003102347254753113
+2025-09-11 02:54:26   rerank loss:0.007127706427127123
+2025-09-11 03:14:43   Epoch[73](0/2): current batch triplet loss = 0.0209, average epoch triplet loss = 0.0115
+2025-09-11 03:14:43   Cache: 1 / 2
+2025-09-11 03:46:15   Epoch[73](1/2): current batch triplet loss = 0.0107, average epoch triplet loss = 0.0110
+2025-09-11 03:46:15   Finished epoch 73 in 1:02:52, average epoch triplet loss = 0.0110
+2025-09-11 03:46:15   Extracting database features for evaluation/testing
+2025-09-11 03:49:18   Extracting queries features for evaluation/testing, time for each:0.009605152808731093
+2025-09-11 03:49:29   Calculating recalls
+2025-09-11 03:49:29   Retrieval time for each:0.00014134870993124472,0.1045980453491211/740
+2025-09-11 03:57:39   (740, 100), torch.Size([2, 100]), time:,1.218383550643921, time each:, 0.6143359690099149
+2025-09-11 03:58:03   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.8, R@5: 92.6, R@10: 94.1, R@20: 95.1, R@100: 96.6
+2025-09-11 03:58:10   Not improved: 3 / 75: best R@1 = 83.1, current R@1 = 82.8
+2025-09-11 03:58:10   Start training epoch: 74
+2025-09-11 03:58:10   Cache: 0 / 2
+2025-09-11 04:09:00   global loss:0.010265067219734192
+2025-09-11 04:09:00   rerank loss:0.009808060713112354
+2025-09-11 04:09:02   global loss:0.002474583685398102
+2025-09-11 04:09:02   rerank loss:0.001574208028614521
+2025-09-11 04:29:12   Epoch[74](0/2): current batch triplet loss = 0.0008, average epoch triplet loss = 0.0115
+2025-09-11 04:29:12   Cache: 1 / 2
+2025-09-11 05:00:09   Epoch[74](1/2): current batch triplet loss = 0.0021, average epoch triplet loss = 0.0110
+2025-09-11 05:00:09   Finished epoch 74 in 1:01:59, average epoch triplet loss = 0.0110
+2025-09-11 05:00:09   Extracting database features for evaluation/testing
+2025-09-11 05:03:12   Extracting queries features for evaluation/testing, time for each:0.00957313144120457
+2025-09-11 05:03:20   Calculating recalls
+2025-09-11 05:03:21   Retrieval time for each:0.00014132035745156778,0.10457706451416016/740
+2025-09-11 05:11:27   (740, 100), torch.Size([2, 100]), time:,1.213150978088379, time each:, 0.6111772740209425
+2025-09-11 05:11:55   Recalls on val set < BaseDataset, msls - #database: 18871; #queries: 740 >: all_map@100: 0.620
+rerank: R@1: 82.8, R@5: 92.6, R@10: 94.2, R@20: 95.1, R@100: 96.6
+2025-09-11 05:12:02   Not improved: 4 / 75: best R@1 = 83.1, current R@1 = 82.8
+2025-09-11 05:12:02   Best R@1: 83.1
+2025-09-11 05:12:02   Trained for 75 epochs, in total in 3 days, 20:35:11
+2025-09-11 05:12:03   Extracting database features for evaluation/testing
+2025-09-11 05:19:12   Extracting queries features for evaluation/testing, time for each:0.011020055633861747
+2025-09-11 05:19:26   Calculating recalls
+2025-09-11 05:19:26   Retrieval time for each:0.000299734131902711,0.3506889343261719/1170
+2025-09-11 05:31:36   (1170, 100), torch.Size([2, 100]), time:,1.21824312210083, time each:, 0.6108272646227454
+2025-09-11 05:31:37   Recalls on < BaseDataset, msls - #database: 38770; #queries: 1170 >: 
